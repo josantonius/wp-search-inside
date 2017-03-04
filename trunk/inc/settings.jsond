@@ -1,0 +1,18 @@
+{  
+   "searchIn":"main",
+   "executeWith":"alphanumeric",
+   "searchMode":"words",
+   "wordColors":[  
+      "#57ceb6",
+      "#85c1e9",
+      "#9bce57",
+      "#d5b9e0",
+      "#ffa6ec",
+      "#fdd12e",
+      "#feba73"
+   ],
+   "wordColor":[  
+      "#57ceb6"
+   ],
+   "caseSensitive":false
+}

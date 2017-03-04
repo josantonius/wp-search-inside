@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SearchInside\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-16 19:24+0000\n"
+"PO-Revision-Date: 2017-02-16 19:25+0000\n"
+"Last-Translator: tttttttttt <desarrollos.jota@gmail.com>\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es-ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#. Name of the plugin
+#: Core/Admin.php:77 Core/Admin.php:78
+msgid "SearchInside"
+msgstr "SearchInside"
+
+#: Admin/Pages/Options.php:124 Admin/Pages/Options.php:125
+msgid "Options"
+msgstr "Opciones"
+
+#: Admin/Pages/Options.php:321
+msgid "Search Inside · Options"
+msgstr "Search Inside · Opciones"
+
+#: Admin/Pages/Options.php:343
+msgid "Plugin options"
+msgstr "Opciones del plugin"
+
+#: Admin/Pages/Options.php:349
+msgid "Choose the search engine settings"
+msgstr "Elige la configuración del buscador"
+
+#: Admin/Pages/Options.php:355
+msgid "Customize words colors"
+msgstr "Personalizar colores"
+
+#: Admin/Pages/Options.php:364
+msgid "Save"
+msgstr "Guardar"
+
+#: Admin/Pages/Options.php:390
+msgid "HTML TAG ID WHERE TO SEARCH"
+msgstr "ID DEL TAG HTML DONDE BUSCAR"
+
+#: Admin/Pages/Options.php:396
+msgid "SHOW SEARCH ENGINE WHEN"
+msgstr "MOSTRAR BUSCADOR AL"
+
+#: Admin/Pages/Options.php:402
+msgid "SEARCH FOR"
+msgstr "BUSCAR"
+
+#: Admin/Pages/Options.php:408
+msgid "Case sensitive"
+msgstr "Sensible a mayúsculas"
+
+#: Admin/Pages/Options.php:427
+msgid "Press any alphanumeric key"
+msgstr "Pulsar tecla alfanumérica"
+
+#: Admin/Pages/Options.php:428
+msgid "Press any alphabetic key"
+msgstr "Pulsar tecla alfabética"
+
+#: Admin/Pages/Options.php:429
+msgid "Press any numeric key"
+msgstr "Pulsar tecla numérica"
+
+#: Admin/Pages/Options.php:456
+msgid "Phrases and paragraphs"
+msgstr "Frases y párrafos"
+
+#: Admin/Pages/Options.php:457
+msgid "Words"
+msgstr "Palabras"
+
+#: Admin/includes/footer.php:21
+msgid "Made with "
+msgstr "Hecho con"
+
+#: Admin/includes/footer.php:21
+msgid "by "
+msgstr "por"
+
+#: Admin/includes/footer.php:21
+msgid "App Developer"
+msgstr "Desarrollador de aplicaciones"
+
+#. Name of the plugin
+msgid "Search Inside"
+msgstr "Search Inside"
+
+#. Description of the plugin
+msgid "Easily search text within your pages or blog posts."
+msgstr "Busca y remarca fácilmente frases o palabras en páginas y entradas."
+
+#. URI of the plugin
+msgid "https://github.com/Josantonius/SearchInside.git"
+msgstr "https://github.com/Josantonius/SearchInside.git"
+
+#. Author of the plugin
+msgid "Josantonius"
+msgstr "Josantonius"
+
+#. Author URI of the plugin
+msgid "http://josantonius.com/"
+msgstr "http://josantonius.com/"
