@@ -1,7 +1,10 @@
 # CHANGELOG
 
+## 1.1.1 - 2017-03-04
+* The repository were modified in GitHub.
+
 ## 1.1.0 - 2017-02-20
-* Bug fix - Don't display search engine when typing on input or textarea
+* Bug fix - Don't display search engine when typing on input or textarea.
 
 ## 1.0.0 - 2017-02-16
 * Added `SearchInside\Admin\Pages\Options` class.

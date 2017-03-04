@@ -68,6 +68,9 @@ Search Inside is available in english and spanish language.
 = 1.1.0 =
 * Bug fix `Don't display search engine when typing on input or textarea`.
 
+= 1.1.1 =
+* Bug fix `The repository were modified in GitHub`.
+
 = 1.0.0 =
 * Added `SearchInside\Admin\Pages\Options` class.
 * Added `SearchInside\Admin\Pages\Options::getInstance()` method.
@@ -120,3 +123,6 @@ Search Inside is available in english and spanish language.
 
 = 1.1.0 =
 * Don't display search engine when typing on input or textarea.
+
+= 1.1.1 =
+* The repository were modified in GitHub.
