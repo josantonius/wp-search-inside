@@ -9,61 +9,83 @@
  */
 
 (function ($) {
-    
-   $(document).ready(function () {
 
-        $(document).keypress(function(e) {
+   $(window).load(function () {
 
-            if (!$('#searchinside').length) {
-                
-                if ($("input, textarea").is(":focus")) {
-
-                    return;
-                }
-
-                $.getJSON(searchInside.urlPlugin + "/inc/settings.jsond", function(config) {
-                    
-                   switch(config.executeWith) {
-
-                      case "alphanumeric":
-                            config.executeWith = /[a-zA-Z0-9]/;
-                            break;
-
-                      case "numeric":
-                            config.executeWith = /[0-9]/;
-                            break;
-
-                      case "alphabetic":
-                            config.executeWith = /[a-zA-Z]/;
-                            break;
-                   }
-                    
-                    var inp = String.fromCharCode(e.keyCode);
-
-                    if (config.executeWith.test(inp)) {
-                        showForm(e);
-                        if (config.searchMode == "quotes") {
-                            wordColors = config.wordColor;
-                        } else {
-                            wordColors = config.wordColors;
-                        }
-
-                        config.tag = "EM";
-                        
-                        startSearch(config.searchIn, config.tag, config.searchMode, config.caseSensitive, wordColors);
-                    }
-                   
-                });
-
+        $.getJSON(searchInside.urlPlugin + "inc/settings.jsond", function(config) {
+            if (!$('#' + config.searchIn).length) {
+                return;
             }
 
+            if (config.idContainer && config.idContainer.length > 0) {
+                showForm(null, config);
+                if (config.searchMode == "quotes") {
+                    wordColors = config.wordColor;
+                } else {
+                    wordColors = config.wordColors;
+                }
+                config.tag = "EM";
+                startSearch(config.searchIn, config.tag, config.searchMode, config.caseSensitive, wordColors);
+            } else {
+                $(document).keypress(function(e) {
+
+                    if (!$('#searchinside').length) {
+
+                        if ($("input, textarea").is(":focus")) {
+
+                            return;
+                        }
+
+                        $.getJSON(searchInside.urlPlugin + "inc/settings.jsond", function(config) {
+
+                        switch(config.executeWith) {
+
+                            case "alphanumeric":
+                                    config.executeWith = /[a-zA-Z0-9]/;
+                                    break;
+
+                            case "numeric":
+                                    config.executeWith = /[0-9]/;
+                                    break;
+
+                            case "alphabetic":
+                                    config.executeWith = /[a-zA-Z]/;
+                                    break;
+                        }
+                            
+                            var inp = String.fromCharCode(e.keyCode);
+
+                            if (config.executeWith.test(inp)) {
+                                showForm(e, config);
+                                if (config.searchMode == "quotes") {
+                                    wordColors = config.wordColor;
+                                } else {
+                                    wordColors = config.wordColors;
+                                }
+
+                                config.tag = "EM";
+                                
+                                startSearch(config.searchIn, config.tag, config.searchMode, config.caseSensitive, wordColors);
+                            }
+                        
+                        });
+
+                    }
+
+                });
+            }
         });
 
-        function showForm(e) {
+        function showForm(e, config) {
+            var searching = '';
+
+            if (e && e.which) {
+               searching = String.fromCharCode(e.which);
+            }
 
             $form = $('<form id="searchinside"></form>');
             form1 = '<div id="wpsi-content">';
-            form2 = '<input type="text" id="wpsi-search-input" value="' + String.fromCharCode(e.which) + '">';
+            form2 = '<input type="text" id="wpsi-search-input" value="' + searching + '">';
             form3 = '<span id="wpsi-counter"><!-- --></span>';
             form4 = '<span id="wpsi-bar">&#124;</span>';
             form5 = '<div id="wpsi-buttons">';
@@ -71,24 +93,37 @@
             form7 = '<span id="wpsi-next-button">&#8675;</span>';
             form8 = '<span id="wpsi-cancel-button" class="wpsi-active-button">&#215;</span>';
             form9 = '</div></div>';
-            
-            $form.append(form1+form2+form3+form4+form5+form6+form7+form8+form9).appendTo($('body'));
 
-            /* Place it under the administration bar */
-            if ($('#wpadminbar').length) {
-                length = $('#wpadminbar').height();
-                $('#searchinside').css('margin-top',length+'px');
+            $form.append(form1+form2+form3+form4+form5+form6+form7+form8+form9);
+
+            if (config.idContainer && config.idContainer.length > 0) {
+                $form.addClass('appended');
+                $form.appendTo($('#' +  config.idContainer));
+            } else {
+                $form.appendTo($('body'));
+
+                /* Place it under the administration bar */
+                if ($('#wpadminbar').length) {
+                    length = $('#wpadminbar').height();
+                    $('#searchinside').css('margin-top',length+'px');
+                }
             }
-
+            /* Prevent submit form with enter key */
+            $("#searchinside").submit(function( event ) {
+                event.preventDefault();
+            });
             /* Show form */
             $('#searchinside').fadeIn(200);
 
             $('#wpsi-buttons').mousedown(function(e){ e.preventDefault(); });
 
             var searchInput = $('#wpsi-search-input');
-            var strLength = searchInput.val().length * 2;
-            searchInput.focus();
-            searchInput[0].setSelectionRange(strLength, strLength);
+            var strLength = searchInput.val() ? searchInput.val().length * 2 : 0;
+
+            if (searching && searching.length > 0){
+                searchInput.focus();
+                searchInput[0].setSelectionRange(strLength, strLength);
+            }
         }
 
         function startSearch(searchIn, tag, searchMode, caseSensitive, colors) {

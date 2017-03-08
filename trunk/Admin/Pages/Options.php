@@ -262,6 +262,11 @@ class Options {
         $file = SearchInside::get_option('settings-json-file');
 
         if (isset($_POST['submit'])) {
+            
+            if (isset($_POST['idContainer'])) {
+                
+                $this->options['idContainer'] = sanitize_text_field($_POST['idContainer']);
+            }
 
             if (isset($_POST['searchIn'])) {
                 
@@ -305,6 +310,7 @@ class Options {
         $this->options['caseSensitive'] = $config['caseSensitive'];
         $this->options['wordColor']     = $config['wordColor'];
         $this->options['wordColors']    = $config['wordColors'];
+        $this->options['idContainer'] = $config['idContainer'];
     }
 
     /** 
@@ -384,6 +390,10 @@ class Options {
         <div id="search-section" class="mdl-list__item">
 
             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" name="idContainer" id="idContainer" type="text" value="<?= $this->options['idContainer'] ?>">
+                    <label class="mdl-textfield__label" for="idContainer"><?= __('HTML TAG ID WHERE APPEND FORM', 'searchinside') ?></label>
+                </div>
                 <div class="mdl-textfield mdl-js-textfield">
                     <input class="mdl-textfield__input" name="searchIn" id="searchIn" type="text" id="searchIn" value="<?= $this->options['searchIn'] ?>">
                     <label class="mdl-textfield__label" for="searchIn"><?= __('HTML TAG ID WHERE TO SEARCH', 'searchinside') ?></label>
