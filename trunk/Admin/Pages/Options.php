@@ -310,6 +310,7 @@ class Options {
         $this->options['caseSensitive'] = $config['caseSensitive'];
         $this->options['wordColor']     = $config['wordColor'];
         $this->options['wordColors']    = $config['wordColors'];
+        $this->options['idContainer'] = $config['idContainer'];
     }
 
     /** 
