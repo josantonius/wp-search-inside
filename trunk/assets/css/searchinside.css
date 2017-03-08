@@ -23,6 +23,16 @@
   display: none;
   z-index: 99999; }
 
+#searchinside.appended{
+  position: static;
+  display: block;
+  width: 100%;
+}
+
+#searchinside.appended #wpsi-cancel-button{
+  display: none !important;
+}
+
 #wpsi-search-input {
   height: 100%;
   width: 100%;
