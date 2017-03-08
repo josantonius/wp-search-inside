@@ -118,7 +118,7 @@
             $('#wpsi-buttons').mousedown(function(e){ e.preventDefault(); });
 
             var searchInput = $('#wpsi-search-input');
-            var strLength = searchInput.val().length * 2;
+            var strLength = searchInput.val() ? searchInput.val().length * 2 : 0;
 
             if (searching && searching.length > 0){
                 searchInput.focus();
