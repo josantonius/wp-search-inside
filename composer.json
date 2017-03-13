@@ -2,7 +2,7 @@
     "name":        "josantonius/search-inside",
     "version":     "1.1.2",
     "description": "Easily search text within your pages or blog posts",
-    "type": "wordpress-plugine",
+    "type": "wordpress-plugin",
     "keywords": [
         "Wordpress", 
         "Plugin", 
