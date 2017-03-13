@@ -148,6 +148,11 @@ function Hilitor2(id, tag, colors)
         match.style.backgroundColor = wordColor[regs[1].toLowerCase()];
         match.style.fontStyle = "inherit";
         match.style.color = "#000";
+        
+        // Expand padding if it is a phrase search so that the color stay unified
+        if (this.searchMode === " ") {
+          match.style.padding = "2px";
+        }
 
         var after;
         if(regs[0].match(/^\s/)) { // in case of leading whitespace

@@ -393,14 +393,14 @@ class Options {
                     <select class="mdl-select__input" id="executeWith" name="executeWith">
                         <?= $this->optionsSearchSelectOneSection(); ?>
                     </select>
-                    <label class="mdl-select__label" for="executeWith">&nbsp;<?php echo __('SEARCH ENGINE', 'searchinside') ?></label>
+                    <label class="mdl-select__label" for="executeWith">&nbsp;<?php echo __('SEARCH a', 'searchinside') ?></label>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="wpsi-html-tag">
                     <input class="mdl-textfield__input" name="idContainer" id="idContainer" type="text" value="<?= $this->options['idContainer'] ?>">
                     <label class="mdl-textfield__label" for="idContainer"><?= __('HTML TAG ID WHERE TO INSERT FORM', 'searchinside') ?></label>
                 </div>
                 <div id="wpsi-shortcode">
-                   <p class="shortcode-example">[add-search-engine]</p>
+                   <p class="shortcode-example">[add-search-inside]</p>
                 </div>
                 <div class="mdl-select mdl-js-select mdl-select--floating-label">
                     <select class="mdl-select__input" id="searchMode" name="searchMode">

@@ -11,6 +11,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Easily search text within your pages or blog posts.
 
+
 == Description ==
 
 With Search Inside now you can search within your posts or pages. 
@@ -18,15 +19,13 @@ With Search Inside now you can search within your posts or pages.
 = There are different ways to display the search engine =
 
 * The search engine appears when you press any alphabetic or numeric key.
-
 * Appended on a HTML tag.
-
 * Inserted from a shortcode.
+
 
 = Two search modes =
 
 * Look for complete sentences.
-
 * Search words separated by spaces. 
 
 Don't forget to turn on case sensitive mode if you need it!

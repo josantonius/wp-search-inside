@@ -172,9 +172,9 @@
 
             appendForm(null, config);
             $("#searchinside").removeClass("nodisplay");
+            config.Position = $('#searchinside').offset().top;
             runSearch(config);
-            var tag = $('#searchinside').offset().top;
-            keepAlwaysVisible(tag);
+            keepAlwaysVisible(config.Position);
     }
 
     /**
@@ -280,12 +280,13 @@
         },false);
 
         navCancel.addEventListener("click",function(e){
+            searchEl.value="";
+            searchTrigger();
+            container.scrollTop=0;
             if ((config.idContainer === 'body')) {
-                searchEl.value="";
-                searchTrigger();
-                container.scrollTop=0;
                 $('#searchinside').remove();
             } else {
+                $(window).scrollTop(config.Position - 100);
                 $("#searchinside").addClass("appended");
             }
         },false);
