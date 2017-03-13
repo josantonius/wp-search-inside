@@ -6,7 +6,7 @@
 
 Busca y remarca fácilmente frases o palabras en páginas y entradas.
 
-![image](resources/![image](assets/screenshot-1.png))
+![image](resources/banner-1544x500.png)
 
 ---
 

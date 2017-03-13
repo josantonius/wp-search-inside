@@ -6,7 +6,7 @@
 
 Easily search text within your pages or blog posts.
 
-![image](resources/![image](assets/screenshot-1.png))
+![image](resources/banner-1544x500.png)
 
 ---
 
