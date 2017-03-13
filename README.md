@@ -1,6 +1,6 @@
 # Search Inside Wordpress Plugin
 
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/plugin/dt/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![License](https://poser.pugx.org/josantonius/searchinside/license/LICENSE)](https://github.com/Josantonius/WP-SearchInside/blob/master/license/LICENSE)
+[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/plugin/dt/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![License](https://poser.pugx.org/josantonius/search-inside/license/license)](https://packagist.org/packages/josantonius/search-inside/license/license)
 
 [Versión en español](README-ES.md)
 
