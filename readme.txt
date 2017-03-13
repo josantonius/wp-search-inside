@@ -1,6 +1,95 @@
-# CHANGELOG
+=== Search Inside ===
+Contributors: josantonius
+Donate link: https://github.com/Josantonius
+Tags: search engine, search inside entries, search inside pages, Wordpress search engine, highlighting words, highlight phrases, highlight paragraphs
 
-## 1.1.2 - 2017-03-12
+Requires at least: 3.5
+Tested up to: 4.7
+Stable tag: 1.1.2
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Easily search text within your pages or blog posts.
+
+== Description ==
+
+With Search Inside now you can search within your posts or pages. 
+
+= There are different ways to display the search engine =
+
+* The search engine appears when you press any alphabetic or numeric key.
+
+* Appended on a HTML tag.
+
+* Inserted from a shortcode.
+
+= Two search modes =
+
+* Look for complete sentences.
+
+* Search words separated by spaces. 
+
+Don't forget to turn on case sensitive mode if you need it!
+
+[Descripción en español](https://github.com/Josantonius/WP-SearchInside/blob/master/README-ES.md)
+
+== Installation ==
+
+= From your WordPress dashboard =
+
+1. Visit 'Plugins > Add New'
+2. Search for 'Search Inside'
+3. Activate Search Inside from your Plugins page.
+
+= From WordPress.org =
+
+1. Download Search Inside.
+2. Upload the 'search-inside' directory to your '/wp-content/plugins/' directory, using your favorite method (ftp, sftp, scp, etc...)
+3. Activate Search Inside from your Plugins page.
+
+= Once Activated =
+
+1. Visit 'Search Inside > Options' to configure the plugin.
+
+== Frequently Asked Questions ==
+
+= Can I add the search engine from a shortcode? =
+
+Yes. Since version 1.1.2 this is already possible.
+
+= Can I insert the search engine anywhere in my web? =
+
+That's right, Search engine can be inserted in any site of your web, you only have to indicate the ID of the HTML tag.
+
+= Is it compatible with HipHop Virtual Machine (HHVM)? =
+
+Yes, it is compatible.
+
+= Minimum Requirements =
+
+* WordPress 3.5 or greater
+* PHP version 5.3 or greater
+
+== Screenshots ==
+ 
+1. Admin panel (English)
+2. Admin panel (English)
+3. Admin panel (English)
+4. Admin panel (Español)
+5. Admin panel (Español)
+6. Admin panel (Español)
+7. Front search words append HTML tag id
+8. Front search words search engine fixed
+9. Front search phrases append HTML tag id
+10. Front search phrases search engine fixed
+
+== Languages ==
+
+Search Inside is available in english and spanish language.
+
+== Changelog ==
+
+= 1.1.2 =
 * New improvements were added: now you can add the search engine in any HTML tag or from through shortcode. Also, some bugs were fixed and the code was optimized.
 
 * Added `search-inside/assets/js/searchinside-admin.js` file.
@@ -12,13 +101,13 @@
 * Deleted `Josantonius\WP\Language\Language` class.
 * Deleted `Josantonius\WP\Language\Language->__construct()` method.
 
-## 1.1.1 - 2017-03-04
-* The repository were modified in GitHub.
+= 1.1.1 =
+* Bug fix `The repository were modified in GitHub`.
 
-## 1.1.0 - 2017-02-20
-* Bug fix - Don't display search engine when typing on input or textarea.
+= 1.1.0 =
+* Bug fix `Don't display search engine when typing on input or textarea`.
 
-## 1.0.0 - 2017-02-16
+= 1.0.0 =
 * Added `SearchInside\Admin\Pages\Options` class.
 * Added `SearchInside\Admin\Pages\Options::getInstance()` method.
 * Added `SearchInside\Admin\Pages\Options::getOptions()` method.
@@ -84,3 +173,17 @@
 
 * Added `search-inside/assets/inc/settings.inc.php` file.
 * Added `search-inside/assets/inc/settings.jsond` file.
+
+== Upgrade Notice ==
+
+= 1.1.2 =
+* New improvements were added: now you can add the search engine in any HTML tag or from through shortcode. Also, some bugs were fixed and the code was optimized.
+
+= 1.1.1 =
+* The repository were modified in GitHub.
+
+= 1.1.0 =
+* Don't display search engine when typing on input or textarea.
+
+= 1.0.0 =
+* First version.

@@ -1,10 +1,12 @@
 # Search Inside Wordpress Plugin
 
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/plugin/dt/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![License](https://poser.pugx.org/search-inside/searchinside/license)](https://github.com/Search-Inside/SearchInside/blob/master/LICENSE)
+[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/plugin/dt/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![License](https://poser.pugx.org/josantonius/searchinside/license)](https://github.com/Josantonius/SearchInside/blob/master/LICENSE)
 
-[Spanish version](README-ES.md)
+[Versión en español](README-ES.md)
 
 Easily search text within your pages or blog posts.
+
+![image](resources/![image](assets/screenshot-1.png))
 
 ---
 
@@ -12,14 +14,36 @@ Easily search text within your pages or blog posts.
 - [Requirements](#requirements)
 - [Images](#images)
 - [Contribute](#contribute)
-- [Author](#author)
+- [Copyright](#copyright)
 - [Licensing](#licensing)
 
 ---
 
+With Search Inside now you can search within your posts or pages. 
+
+**There are different ways to display the search engine**
+
+- The search engine appears when you press any alphabetic or numeric key.
+
+- Appended on a HTML tag.
+
+- Inserted from a shortcode.
+
+**Two search modes**
+
+- Look for complete sentences.
+
+- Search words separated by spaces. 
+
+Don't forget to turn on case sensitive mode if you need it!
+
 ### Installation
 
 You can download this plugin from the [official repository](https://es.wordpress.org/plugins/search-inside/) in WordPress.
+
+From [Composer](http://getcomposer.org/download/).
+
+    $ composer require josantonius/search-inside
 
 From your WordPress dashboard:
 
@@ -43,10 +67,13 @@ This pluggin is supported by PHP versions 5.3 or higher and is compatible with H
 
 ### Images
 
-![image](assets/screenshot-1.png)
-![image](assets/screenshot-3.png)
-![image](assets/screenshot-5.png)
-![image](assets/screenshot-6.png)
+![image](resources/screenshot-1.png)
+![image](resources/screenshot-2.png)
+![image](resources/screenshot-3.png)
+![image](resources/screenshot-7.png)
+![image](resources/screenshot-8.png)
+![image](resources/screenshot-9.png)
+![image](resources/screenshot-10.png)
 
 ### Contribute
 1. Check for open issues or open a new issue to start a discussion around a bug or feature.
@@ -57,9 +84,11 @@ This pluggin is supported by PHP versions 5.3 or higher and is compatible with H
 
 This is intended for large and long-lived objects.
 
-### Author
+### Copyright
 
-Maintained by [Josantonius](https://github.com/Josantonius/).
+2017 Josantonius, [josantonius.com](https://josantonius.com/)
+
+If you found this release useful please let the author know! Follow on [Twitter](https://twitter.com/Josantonius).
 
 ### Licensing
 

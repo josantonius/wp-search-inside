@@ -1,0 +1,39 @@
+{
+    "name":        "josantonius/search-inside",
+    "version":     "1.1.2",
+    "description": "Easily search text within your pages or blog posts",
+    "type": "wordpress-plugine",
+    "keywords": [
+        "Wordpress", 
+        "Plugin", 
+        "Search",
+        "PHP"
+    ],
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name":     "Josantonius",
+            "email":    "hola@josantonius.com",
+            "homepage": "https://github.com/josantonius",
+            "role":     "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "support": {
+        "issues": "https://github.com/Josantonius/search-inside/issues",
+        "forum": "http://stackoverflow.com/tags/search-inside",
+        "source": "https://github.com/Josantonius/search-inside"
+    },
+    "require": {
+        "php": "^5.3 || ^7.0",
+        "Josantonius/Json" : "^1.1.0",
+        "eliasis-framework/installers": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "SearchInside\\Core\\"  : "Core/",
+            "SearchInside\\Admin\\" : "Admin/"
+        }
+    }
+}
