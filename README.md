@@ -41,7 +41,7 @@ Don't forget to turn on case sensitive mode if you need it!
 
 You can download this plugin from the [official repository](https://es.wordpress.org/plugins/search-inside/) in WordPress.
 
-From [Composer](http://getcomposer.org/download/).
+From [Composer](http://getcomposer.org/download/). In the root folder of WordPress run:
 
     $ composer require josantonius/search-inside
 

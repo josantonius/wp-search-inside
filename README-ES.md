@@ -41,7 +41,7 @@ Con Search Inside ahora puedes realizar búsquedas dentro de tus publicaciones o
 
 Puedes instalar este plugin desde el [repositorio oficial](https://es.wordpress.org/plugins/search-inside/) en WordPress.
 
-Utilizando [Composer](http://getcomposer.org/download/).
+Utilizando [Composer](http://getcomposer.org/download/). En la carpeta raíz de WordPress ejecutar:
 
     $ composer require josantonius/search-inside
 
