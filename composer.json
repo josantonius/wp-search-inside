@@ -13,13 +13,15 @@
     "authors": [
         {
             "name":     "Josantonius",
-            "email":    "hola@josantonius.com",
-            "homepage": "https://github.com/josantonius",
+            "email":    "hello@josantonius.com",
+            "homepage": "https://josantonius.com",
             "role":     "Developer"
         }
     ],
+    "config": {
+        "preferred-install": "dist"
+    },
     "minimum-stability": "dev",
-    "prefer-stable" : true,
     "support": {
         "issues": "https://github.com/Josantonius/search-inside/issues",
         "forum": "http://stackoverflow.com/tags/search-inside",
@@ -27,8 +29,8 @@
     },
     "require": {
         "php": "^5.3 || ^7.0",
-        "Josantonius/Json" : "^1.1.0",
-        "eliasis-framework/installers": "*"
+        "Josantonius/Json" : "^1.1.1",
+        "composer/installers": "master"
     },
     "autoload": {
         "psr-4": {

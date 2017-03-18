@@ -1,14 +1,11 @@
 /**
  * Search Inside Wordpress Plugin.
  * 
- * @author     Suriya Sripalang
- * @author     Josantonius - info@josantonius.com
+ * @author     Josantonius - hello@josantonius.com
  * @copyright  Copyright (c) 2017
  * @license    GPL-2.0+
- * @link       https://codepen.io/etcpe9/pen/PqyOye/
+ * @link       https://github.com/Josantonius/WP-SearchInside.git
  * @since      1.0.0
- *
-
  */
 
 (function ($) {

@@ -1,7 +1,7 @@
 /**
  * Search Inside Wordpress Plugin.
  * 
- * @author     Josantonius - hola@josantonius.com
+ * @author     Josantonius - hello@josantonius.com
  * @copyright  Copyright (c) 2017
  * @license    GPL-2.0+
  * @link       https://github.com/Josantonius/WP-SearchInside.git
