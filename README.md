@@ -94,7 +94,7 @@ This is intended for large and long-lived objects.
 
 ### Licensing
 
-This project is licensed under **MIT license**. See the [LICENSE](LICENSE) file for more info.
+This project is licensed under **GPL-2.0+**. See the [LICENSE](LICENSE) file for more info.
 
 ### Copyright
 

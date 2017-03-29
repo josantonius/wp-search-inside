@@ -94,7 +94,7 @@ Esto está pensado para proyectos grandes y de larga duración.
 
 ### Licencia
 
-Este proyecto está licenciado bajo **licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más información.
+Este proyecto está licenciado bajo **licencia GPL-2.0+**. Consulta el archivo [LICENSE](LICENSE) para más información.
 
 ### Copyright
 
