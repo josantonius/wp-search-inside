@@ -2,16 +2,18 @@
 /**
  * Search Inside Wordpress Plugin.
  * 
- * @author     Josantonius - hola@josantonius.com
+ * @author     Josantonius - hello@josantonius.com
  * @copyright  Copyright (c) 2017
  * @license    GPL-2.0+
- * @link       https://github.com/Josantonius/WP-SearchInside.git
+ * @link       https://github.com/Josantonius/Search-Inside.git
  * @since      1.0.0
  */
 
-require __DIR__ . '/vendor/autoload.php';
+$DS = DIRECTORY_SEPARATOR;
 
-use SearchInside\Core\Uninstall;
+require 'lib' . $DS . 'vendor' . $DS .'autoload.php';
+
+use SearchInside\Controller\Uninstall;
 
 if (!defined('WP_UNINSTALL_PLUGIN')) {
 
