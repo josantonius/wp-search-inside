@@ -211,8 +211,15 @@ class Launcher extends Controller {
      */
     protected function addScripts() {
 
-        WP_Register::add('script', App::assets('js', 'searchinside'));
-        WP_Register::add('script', App::assets('js', 'hilitor'));
+        $scripts = [
+            'searchinside', 
+            'hilitor',
+        ];
+
+        foreach ($scripts as $script) {
+
+            WP_Register::add('script', App::assets('js', $script));
+        }
     }
 
     /**
