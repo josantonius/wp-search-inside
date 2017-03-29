@@ -28,8 +28,8 @@ class Uninstall {
      */
     public static function removeAll() {
 
-        delete_option('searchinside_version');
+        delete_option('search-inside-version');
         // For site options in Multisite
-        delete_site_option('searchinside_version');
+        delete_site_option('search-inside-version');
     }
 }

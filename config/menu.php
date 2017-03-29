@@ -17,8 +17,8 @@ return [
 
 	'menu' => [
 		'top-level' => [
-			'title'      => __('Search Inside', $textdomain),
-			'name'       => __('Search Inside', $textdomain),
+			'title'      => __('Search Inside', 'search-iniside'),
+			'name'       => __('Search Inside', 'search-iniside'),
 			'capability' => 'manage_options',
 			'slug'       => 'searchinside-options',
 			'function'   => '',
@@ -29,8 +29,8 @@ return [
 	'submenu' => [
 		'options' => [
 			'parent'     => 'searchinside-options',
-			'title'      => __('Options', $textdomain),
-			'name'       => __('Options', $textdomain),
+			'title'      => __('Options', 'search-iniside'),
+			'name'       => __('Options', 'search-iniside'),
 			'capability' => 'manage_options',
 			'slug'       => 'searchinside-options',
 			'function'   => '',
