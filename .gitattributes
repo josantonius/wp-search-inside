@@ -1,4 +1,4 @@
-/vendor export-ignore
+/lib export-ignore
 /resources export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
