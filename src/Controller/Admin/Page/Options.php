@@ -40,6 +40,8 @@ class Options extends Controller {
      */
     public function init() {
 
+        App::id(SEARCHINSIDE);
+        
         $this->addScripts();
         $this->addStyles();
         $this->checkRequest();
@@ -237,6 +239,8 @@ class Options extends Controller {
      * @since 1.1.3
      */
     public function render() {
+        
+        App::id(SEARCHINSIDE);
 
         $this->view->renderizate(App::path('layout') . 'default');
     }

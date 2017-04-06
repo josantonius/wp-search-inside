@@ -11,6 +11,8 @@
 
 use Eliasis\App\App,
     Josantonius\Hook\Hook;
+
+App::id(SEARCHINSIDE);
 ?>
 
 <form enctype="multipart/form-data" id="search-inside-form" method="post" action="">

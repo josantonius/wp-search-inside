@@ -1,8 +1,12 @@
 # CHANGELOG
 
+## 1.1.4 - 2017-04-07
+
+* Eliasis Framework was modified for to used on several WordPress plugins without any conflict between them.
+
 ## 1.1.3 - 2017-03-29
 
-* Fixed bug in shortcode.
+* Bug fixed in shortcode.
 
 * Eliasis PHP Framework was added to the plugin core.
 

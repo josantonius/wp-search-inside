@@ -32,6 +32,8 @@ class Launcher extends Controller {
      * @return boolean
      */
     public function init() {
+        
+        App::id(SEARCHINSIDE);
 
         if (!isset($_REQUEST['plugin'])) { $_REQUEST['plugin'] = ''; }
 
@@ -62,6 +64,8 @@ class Launcher extends Controller {
      * @uses flush_rewrite_rules() → remove rewrite rules and recreate
      */
     public function activation() {
+
+        App::id(SEARCHINSIDE);
 
         check_admin_referer("activate-plugin_{$_REQUEST['plugin']}");
 
@@ -131,6 +135,8 @@ class Launcher extends Controller {
      * @since 1.1.3 
      */
     public function setLanguage() {
+        
+        App::id(SEARCHINSIDE);
 
         load_plugin_textdomain(
             'search-inside', 
@@ -174,6 +180,8 @@ class Launcher extends Controller {
      */
     public function getCurrentScreen() {
 
+        App::id(SEARCHINSIDE);
+
         foreach (App::pages() as $page) {
 
             $page = App::namespace('admin-page') . $page;
@@ -210,7 +218,7 @@ class Launcher extends Controller {
      * @since 1.1.3
      */
     protected function addScripts() {
-
+        
         $scripts = [
             'searchinside', 
             'hilitor',

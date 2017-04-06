@@ -5,7 +5,7 @@
  * Plugin Name: Search Inside
  * Plugin URI:  https://github.com/Josantonius/Search-Inside.git
  * Description: Easily search text within your pages or blog posts.
- * Version:     1.1.3
+ * Version:     1.1.4
  * Author:      Josantonius
  * Author URI:  https://josantonius.com/ 
  * License:     GPL-2.0+
@@ -26,9 +26,11 @@ if (!function_exists('add_action') || !defined('ABSPATH')) {
 
 $DS = DIRECTORY_SEPARATOR;
 
+define('SEARCHINSIDE', 'SearchInside');
+
 require 'lib' . $DS . 'vendor' . $DS .'autoload.php';
 
-new App(__DIR__, 'wordpress-plugin');
+App::run(__DIR__, 'wordpress-plugin', SEARCHINSIDE);
 
 $method = App::namespace('controller') . 'Launcher::getInstance';
 

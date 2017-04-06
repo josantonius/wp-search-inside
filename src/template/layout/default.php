@@ -10,6 +10,8 @@
  */
 
 use Eliasis\App\App;
+        
+App::id(SEARCHINSIDE);
 
 require(App::path('elements') . 'header.php');
 require(App::path('pages')    . 'options.php');

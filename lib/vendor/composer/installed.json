@@ -230,19 +230,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Eliasis-Framework/Eliasis.git",
-            "reference": "241a449581954ce779afc03f0be90a4b664b1d26"
+            "reference": "664108f24da2fe8eab8f10e5f7db94a63353ea36"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/241a449581954ce779afc03f0be90a4b664b1d26",
-            "reference": "241a449581954ce779afc03f0be90a4b664b1d26",
+            "url": "https://api.github.com/repos/Eliasis-Framework/Eliasis/zipball/664108f24da2fe8eab8f10e5f7db94a63353ea36",
+            "reference": "664108f24da2fe8eab8f10e5f7db94a63353ea36",
             "shasum": ""
         },
         "require": {
             "josantonius/url": "^1.1.1",
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-29 03:24:48",
+        "time": "2017-04-06 19:05:37",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -387,18 +387,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/Josantonius/WP_Menu.git",
-            "reference": "1cabdaa0bf25ddfe1581d1a0d3d724ad46da5268"
+            "reference": "560796cbe20e5327ed2c4ae20114a1bd651feb17"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Josantonius/WP_Menu/zipball/1cabdaa0bf25ddfe1581d1a0d3d724ad46da5268",
-            "reference": "1cabdaa0bf25ddfe1581d1a0d3d724ad46da5268",
+            "url": "https://api.github.com/repos/Josantonius/WP_Menu/zipball/560796cbe20e5327ed2c4ae20114a1bd651feb17",
+            "reference": "560796cbe20e5327ed2c4ae20114a1bd651feb17",
             "shasum": ""
         },
         "require": {
             "php": "^5.6 || ^7.0"
         },
-        "time": "2017-03-27 00:02:15",
+        "time": "2017-03-30 01:00:10",
         "type": "library",
         "extra": {
             "branch-alias": {
