@@ -11,6 +11,9 @@
 
 namespace SearchInside\Controller;
 
+
+use Eliasis\App\App;
+
 /**
  * Main method for cleaning and removal of components.
  * 
@@ -28,8 +31,8 @@ class Uninstall {
      */
     public static function removeAll() {
 
-        delete_option('search-inside-version');
+        delete_option(App::plugin('name') . '-version');
         // For site options in Multisite
-        delete_site_option('search-inside-version');
+        delete_site_option(App::plugin('name') . '-version');
     }
 }

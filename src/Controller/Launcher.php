@@ -37,10 +37,6 @@ class Launcher extends Controller {
 
         if (!isset($_REQUEST['plugin'])) { $_REQUEST['plugin'] = ''; }
 
-        register_activation_hook(__FILE__, [$this, 'activation']);
-
-        register_deactivation_hook(__FILE__, [$this, 'deactivation']);
-
         add_shortcode('add-search-inside', [$this, 'addShortcode']);
         
         add_action('init', [$this, 'setLanguage']);
