@@ -32,7 +32,7 @@ require 'lib' . $DS . 'vendor' . $DS .'autoload.php';
 
 App::run(__DIR__, 'wordpress-plugin', SEARCHINSIDE);
 
-$method = App::namespace('controller') . 'Launcher::getInstance';
+$method = App::getNamespace('controller') . 'Launcher::getInstance';
 
 $Launcher = call_user_func($method);
 

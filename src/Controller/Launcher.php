@@ -180,7 +180,7 @@ class Launcher extends Controller {
 
         foreach (App::pages() as $page) {
 
-            $page = App::namespace('admin-page') . $page;
+            $page = App::getNamespace('admin-page') . $page;
 
             if (class_exists($page)) {
 

@@ -11,7 +11,7 @@
 
 return [
 
-    'namespace' => [
+    'getNamespace' => [
 
         'admin-page' => 'SearchInside\\Controller\\Admin\\Page\\',
         'controller' => 'SearchInside\\Controller\\',
