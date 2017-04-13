@@ -11,8 +11,6 @@
 
 use Eliasis\App\App;
 
-$textdomain = App::plugin('name');
-
 return [
 
 	'menu' => [
