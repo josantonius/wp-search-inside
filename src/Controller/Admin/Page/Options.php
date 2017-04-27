@@ -39,8 +39,6 @@ class Options extends Controller {
      * @since 1.1.3
      */
     public function init() {
-
-        App::id(SEARCHINSIDE);
         
         $this->addScripts();
         $this->addStyles();
@@ -57,7 +55,11 @@ class Options extends Controller {
      */
     public function addSubmenuPage() {
 
-        WP_Menu::add('submenu', App::submenu('options'), [$this, 'render']);
+        WP_Menu::add(
+            'submenu', 
+            App::SearchInside('submenu', 'options'), 
+            [$this, 'render']
+        );
     }
 
     /**
@@ -75,7 +77,10 @@ class Options extends Controller {
 
         foreach ($scripts as $script) {
 
-            WP_Register::add('script', App::assets('js', $script));
+            WP_Register::add(
+                'script', 
+                App::SearchInside('assets', 'js', $script)
+            );
         }
     }
 
@@ -94,7 +99,10 @@ class Options extends Controller {
 
         foreach ($styles as $style) {
 
-            WP_Register::add('style',  App::assets('css', $style));
+            WP_Register::add(
+                'style',  
+                App::SearchInside('assets', 'css', $style)
+            );
         }
     }
 
@@ -106,6 +114,8 @@ class Options extends Controller {
      * @uses get_option() → retrieves an option value
      */
     public function checkRequest() { 
+
+        App::id(SEARCHINSIDE);
 
         App::addOption('data', $this->model->getSettings());
 
@@ -148,7 +158,9 @@ class Options extends Controller {
             $this->model->setSettings(App::data());
         }
 
-        $sensitive = (App::data('caseSensitive')) ? 'checked' : '';
+        $caseSensitive = App::SearchInside('data', 'caseSensitive');
+
+        $sensitive = ($caseSensitive) ? 'checked' : '';
 
         App::addOption('data', ['case-sensitive' => $sensitive]);
     }
@@ -195,7 +207,9 @@ class Options extends Controller {
 
         foreach ($executeWith as $key => $value) {
 
-            $selected = (App::data('executeWith') == $key) ? 'selected' : '';
+            $execWith = App::SearchInside('data', 'executeWith');
+
+            $selected = ($execWith == $key) ? 'selected' : '';
 
             $options .= '<option value="' . $key . '" ' . $selected . '>' . 
                             $value . 
@@ -223,7 +237,9 @@ class Options extends Controller {
 
         foreach ($searchMode as $key => $value) {
 
-            $selected = (App::data('searchMode') == $key) ? 'selected' : '';
+            $mode = App::SearchInside('data', 'searchMode');
+
+            $selected = ($mode == $key) ? 'selected' : '';
 
             $options .= '<option value="' . $key . '" ' . $selected . '>' . 
                             $value . 
@@ -240,8 +256,8 @@ class Options extends Controller {
      */
     public function render() {
         
-        App::id(SEARCHINSIDE);
-
-        $this->view->renderizate(App::path('layout') . 'default');
+        $this->view->renderizate(
+            App::SearchInside('path', 'layout') . 'default'
+        );
     }
 }

@@ -11,8 +11,9 @@
 
 use Eliasis\App\App;
 
-$css = App::url('css');
-$js  = App::url('js');
+$json = App::SearchInside('url', 'json');
+$css  = App::SearchInside('url', 'css');
+$js   = App::SearchInside('url', 'js');
 
 return [
 
@@ -27,7 +28,7 @@ return [
                 'version'   => '1.1.3',
                 'footer'    => true,
                 'params'    => [
-                    'settings' => App::url('json') . App::file('settings'),
+                    'settings' => $json . App::SearchInside('file', 'settings'),
                 ],
             ],
             'hilitor' => [

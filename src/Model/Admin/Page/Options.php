@@ -24,7 +24,9 @@ class Options extends Model {
 
 	protected function __construct() {
 
-		$this->filepath = App::path('json') . App::file('settings');
+        $jsonPath = App::SearchInside('path', 'json');
+
+		$this->filepath = $jsonPath . App::SearchInside('file', 'settings');
 	}
 
     /** 

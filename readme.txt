@@ -4,8 +4,8 @@ Donate link: https://paypal.me/Josantonius
 Tags: search engine, search inside entries, search inside pages, Wordpress search engine, highlighting words, highlight phrases, highlight paragraphs
 
 Requires at least: 3.5
-Tested up to: 4.7.3
-Stable tag: 1.1.4
+Tested up to: 4.7.4
+Stable tag: 1.1.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -87,6 +87,9 @@ Yes, it is compatible.
 Search Inside is available in english and spanish language.
 
 == Changelog ==
+
+= 1.1.5 =
+* Eliasis Framework has been updated to version 1.0.4.
 
 = 1.1.4 =
 * Eliasis Framework was modified for to used on several WordPress plugins without any conflict between them.
@@ -278,6 +281,8 @@ Search Inside is available in english and spanish language.
 * Added `search-inside/assets/inc/settings.jsond` file.
 
 == Upgrade Notice ==
+= 1.1.5 =
+* Eliasis Framework has been updated to version 1.0.4.
 
 = 1.1.4 =
 * Eliasis Framework was modified for to used on several WordPress plugins without any conflict between them.

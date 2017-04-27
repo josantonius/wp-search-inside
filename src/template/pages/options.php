@@ -12,7 +12,7 @@
 use Eliasis\App\App,
     Josantonius\Hook\Hook;
 
-App::id(SEARCHINSIDE);
+$data = App::SearchInside('data');
 ?>
 
 <form enctype="multipart/form-data" id="search-inside-form" method="post" action="">
@@ -33,7 +33,7 @@ App::id(SEARCHINSIDE);
                <div class="search-fields">
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 
-                     <?php $searchIn = App::data('searchIn') ?>
+                     <?php $searchIn = $data['searchIn'] ?>
 
                      <input class="mdl-textfield__input" name="searchIn" id="searchIn" type="text" id="searchIn" value="<?= $searchIn ?>">
                      <label class="mdl-textfield__label" for="searchIn">
@@ -56,7 +56,7 @@ App::id(SEARCHINSIDE);
                   </div>
                   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="wpsi-html-tag">
 
-                     <?php $idContainer = App::data('idContainer') ?>
+                     <?php $idContainer = $data['idContainer'] ?>
 
                      <input class="mdl-textfield__input" name="idContainer" id="idContainer" type="text" value="<?= $idContainer ?>">
                      <label class="mdl-textfield__label" for="idContainer">
@@ -83,7 +83,7 @@ App::id(SEARCHINSIDE);
                   <div class="jst-checkbox">
                      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 
-                        <?php $checked = App::data('caseSensitive') ?>
+                        <?php $checked = $data['caseSensitive'] ?>
 
                         <input type="checkbox" id="checkbox-1" name="caseSensitive" class="mdl-checkbox__input" <?= $checked ?>>
                         <span class="mdl-checkbox__label">
@@ -106,7 +106,7 @@ App::id(SEARCHINSIDE);
                      <div id="wpsi-colorPicker" class="m-card">
                         <div id="colorsWrapper">
                            
-                        <?php foreach (App::data('wordColors') as $value) : ?>
+                        <?php foreach ($data['wordColors'] as $value) : ?>
 
                            <div class="colorOption" data-color="<?=$value?>"></div>
 

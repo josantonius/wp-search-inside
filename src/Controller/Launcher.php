@@ -32,8 +32,6 @@ class Launcher extends Controller {
      * @return boolean
      */
     public function init() {
-        
-        App::id(SEARCHINSIDE);
 
         if (!isset($_REQUEST['plugin'])) { $_REQUEST['plugin'] = ''; }
 
@@ -61,8 +59,6 @@ class Launcher extends Controller {
      */
     public function activation() {
 
-        App::id(SEARCHINSIDE);
-
         check_admin_referer("activate-plugin_{$_REQUEST['plugin']}");
 
         $this->setVersion();
@@ -81,9 +77,9 @@ class Launcher extends Controller {
      */
     protected function setVersion() {
 
-        $pluginName = App::plugin('name');
+        $pluginName = App::SearchInside('plugin', 'name');
 
-        $actualVersion = App::plugin('version');
+        $actualVersion = App::SearchInside('plugin', 'version');
 
         if (!$installed_version = get_option($pluginName) . '-version') {
 
@@ -131,13 +127,13 @@ class Launcher extends Controller {
      * @since 1.1.3 
      */
     public function setLanguage() {
-        
-        App::id(SEARCHINSIDE);
 
+        $pluginName = App::SearchInside('plugin', 'name');
+        
         load_plugin_textdomain(
             'search-inside', 
             false, 
-            App::plugin('name') . App::DS . 'languages' . App::DS
+            $pluginName . App::DS . 'languages' . App::DS
         );
     }
 
@@ -148,7 +144,7 @@ class Launcher extends Controller {
      */
     protected function setHooks() {
 
-        Hook::setHook(App::hooks());
+        Hook::setHook(App::SearchInside('hooks'));
     }
 
     /**
@@ -160,7 +156,7 @@ class Launcher extends Controller {
      */
     public function admin() {
 
-        WP_Menu::add('menu', App::menu('top-level'));
+        WP_Menu::add('menu', App::SearchInside('menu', 'top-level'));
 
         add_action('plugins_loaded', array($this, 'getCurrentScreen'));
     }
@@ -176,11 +172,9 @@ class Launcher extends Controller {
      */
     public function getCurrentScreen() {
 
-        App::id(SEARCHINSIDE);
+        foreach (App::SearchInside('pages') as $page) {
 
-        foreach (App::pages() as $page) {
-
-            $page = App::getNamespace('admin-page') . $page;
+            $page = App::SearchInside('namespace', 'admin-page') . $page;
 
             if (class_exists($page)) {
 
@@ -222,7 +216,10 @@ class Launcher extends Controller {
 
         foreach ($scripts as $script) {
 
-            WP_Register::add('script', App::assets('js', $script));
+            WP_Register::add(
+                'script', 
+                App::SearchInside('assets', 'js', $script)
+            );
         }
     }
 
@@ -233,6 +230,9 @@ class Launcher extends Controller {
      */
     protected function addStyles() {
 
-        WP_Register::add('style',  App::assets('css', 'searchinside'));
+        WP_Register::add(
+            'style',  
+            App::SearchInside('assets', 'css', 'searchinside')
+        );
     }
 }

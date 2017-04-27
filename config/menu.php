@@ -11,6 +11,8 @@
 
 use Eliasis\App\App;
 
+$iconsUrl = App::SearchInside('url', 'icons');
+
 return [
 
 	'menu' => [
@@ -20,7 +22,7 @@ return [
 			'capability' => 'manage_options',
 			'slug'       => 'searchinside-options',
 			'function'   => '',
-			'icon_url'   => App::url('icons') . 'searchinside-menu-admin.png',
+			'icon_url'   => $iconsUrl . 'searchinside-menu-admin.png',
 			'position'   => 25,
 		],
 	],

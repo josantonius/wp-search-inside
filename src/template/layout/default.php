@@ -11,8 +11,6 @@
 
 use Eliasis\App\App;
         
-App::id(SEARCHINSIDE);
-
-require(App::path('elements') . 'header.php');
-require(App::path('pages')    . 'options.php');
-require(App::path('elements') . 'footer.php');
+require(App::SearchInside('path', 'elements') . 'header.php');
+require(App::SearchInside('path', 'pages')    . 'options.php');
+require(App::SearchInside('path', 'elements') . 'footer.php');

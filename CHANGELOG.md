@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.1.5 - 2017-04-26
+
+* Eliasis Framework has been updated to version 1.0.4.
+
 ## 1.1.4 - 2017-04-07
 
 * Eliasis Framework was modified for to used on several WordPress plugins without any conflict between them.
