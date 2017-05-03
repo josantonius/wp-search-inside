@@ -1,0 +1,93 @@
+#searchinside
+  width: 344px
+  height: 47px
+  border-radius: 2px
+  position: fixed
+  justify-content: center
+  align-content: center
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12)
+  background: #f3f3f3
+  margin-right: 5px
+  flex-direction: column
+  top: 0
+  right: 0
+  z-index: 99999
+  max-width: 344px
+
+.nodisplay
+  display: none
+
+#searchinside.appended #wpsi-cancel-button
+  display: none !important
+
+#wpsi-search-input
+  height: 82%
+  width: 100%
+  margin-top: 2px
+  margin-left: 4px
+  outline-style: none
+  box-shadow: none
+  border-color: transparent
+  border: none !important
+  background: #f3f3f3
+  font-size: 1.1em
+
+#wpsi-buttons
+  display: table
+  text-align: center
+  position: relative
+  color: #b1b1b1
+  float: right
+  padding: 6px
+  top: 50%
+  width: auto
+  -ms-transform: translateY(-50%)
+  -webkit-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+#wpsi-content
+  display: inline-flex
+  height: 100%
+  width: 100%
+
+#wpsi-bar
+  font-size: 31px !important
+  display: table
+  position: relative
+  font-weight: lighter
+  top: 43%
+  -ms-transform: translateY(-50%)
+  -webkit-transform: translateY(-50%)
+  transform: translateY(-50%)
+  color: rgba(0, 0, 0, 0.12) !important
+
+#wpsi-buttons span
+  padding: 6px
+  cursor: pointer
+  font-size: 24px
+
+#wpsi-counter
+  display: table
+  text-align: center
+  font-size: 13px
+  position: relative
+  color: #b1b1b1
+  font-weight: lighter
+  padding: 6px
+  top: 50%
+  width: auto
+  -ms-transform: translateY(-50%)
+  -webkit-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+.wpsi-active-button
+  color: #767676
+
+#searchinside.appended
+  position: static
+  display: block
+  width: 100%
+  -webkit-transition: all 300ms cubic-bezier(0.4, 0.29, 0.64, 0.71)
+  -moz-transition: all 300ms cubic-bezier(0.4, 0.29, 0.64, 0.71)
+  -o-transition: all 300ms cubic-bezier(0.4, 0.29, 0.64, 0.71)
+  transition: all 300ms cubic-bezier(0.4, 0.29, 0.64, 0.71)
