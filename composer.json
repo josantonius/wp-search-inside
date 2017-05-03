@@ -1,6 +1,6 @@
 {
     "name":        "josantonius/search-inside",
-    "version":     "1.1.5",
+    "version":     "1.1.6",
     "description": "Easily search text within your pages or blog posts",
     "type": "wordpress-plugin",
     "keywords": [
@@ -30,7 +30,7 @@
     },
     "require": {
         "php": "^5.3 || ^7.0",
-        "eliasis-framework/eliasis" : "^1.0.4",
+        "eliasis-framework/eliasis" : "^1.0.5",
         "Josantonius/Json"          : "^1.1.1",
         "Josantonius/Hook"          : "^1.0.1",
         "Josantonius/WP_Register"   : "^1.0.0",

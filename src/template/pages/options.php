@@ -36,7 +36,7 @@ $data = App::SearchInside('data');
                      <?php $searchIn = $data['searchIn'] ?>
 
                      <input class="mdl-textfield__input" name="searchIn" id="searchIn" type="text" id="searchIn" value="<?= $searchIn ?>">
-                     <label class="mdl-textfield__label" for="searchIn">
+                     <label id="htmlTag" class="mdl-textfield__label" for="searchIn">
 
                         <?= __('HTML TAG ID WHERE TO SEARCH', 'search-inside') ?>
 

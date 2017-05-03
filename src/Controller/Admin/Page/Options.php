@@ -154,6 +154,11 @@ class Options extends Controller {
                     App::addOption('data', ['wordColor' => $colors[0]]);
                 }
             }
+            
+            if (App::SearchInside('data', 'executeWith') === 'shortcode') {
+
+                App::addOption('data', ['idContainer' => 'search-inside-sc']);
+            }
 
             $this->model->setSettings(App::data());
         }

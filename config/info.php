@@ -14,7 +14,8 @@ return [
 	'plugin' => [
 
 		'name' 				  => dirname(dirname(plugin_basename( __FILE__))),
-	    'version'	  		  => '1.1.5',
+		'wp-plugins-url'	  => 'https://wordpress.org/plugins/',
+	    'version'	  		  => '1.1.6',
 	    'minimum_wp_version'  => '3.8',
 	    'minimum_php_version' => '5.3',
 	],

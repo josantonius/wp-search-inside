@@ -1,5 +1,39 @@
 # CHANGELOG
 
+## 1.1.6 - 2017-05-03
+
+* Eliasis Framework has been updated to version 1.0.5.
+
+* Fixed bug that prevented the shortcode from being displayed.
+
+* Now the search engine will remain visible only when it is used.
+
+* Header and Footer options in the admin panel were updated.
+
+* Added `SearchInside\Controller\Launcher->getPluginRating()` method.
+* Added `SearchInside\Controller\Launcher->_getRatingInWordPress()` method.
+
+* Added `search-inside/public/sass/front/searchinside.sass` file.
+* Added `search-inside/public/sass/front/layout/_search.sass` file.
+
+* Added `search-inside/public/sass/admin/searchinside-admin.sass` file.
+* Added `search-inside/public/sass/admin/custom/_global.sass` file.
+* Added `search-inside/public/sass/admin/custom/_layout.sass` file.
+* Added `search-inside/public/sass/admin/layout/_footer.sass` file.
+* Added `search-inside/public/sass/admin/layout/_header.sass` file.
+* Added `search-inside/public/sass/admin/layout/_options.sass` file.
+* Added `search-inside/public/sass/admin/partials/_cards.sass` file.
+* Added `search-inside/public/sass/admin/partials/_checkbox.sass` file.
+* Added `search-inside/public/sass/admin/partials/_color-picker.sass` file.
+* Added `search-inside/public/sass/admin/partials/_dialogs.sass` file.
+* Added `search-inside/public/sass/admin/partials/_donation.sass` file.
+* Added `search-inside/public/sass/admin/partials/_form.sass` file.
+* Added `search-inside/public/sass/admin/partials/_input.sass` file.
+* Added `search-inside/public/sass/admin/partials/_nav.sass` file.
+* Added `search-inside/public/sass/admin/partials/_select.sass` file.
+* Added `search-inside/public/sass/admin/partials/_shortcode.sass` file.
+* Added `search-inside/public/sass/admin/partials/_wp.rating.sass` file.
+
 ## 1.1.5 - 2017-04-26
 
 * Eliasis Framework has been updated to version 1.0.4.

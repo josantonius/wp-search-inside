@@ -156,9 +156,73 @@ class Launcher extends Controller {
      */
     public function admin() {
 
+        $this->getPluginRating();
+
         WP_Menu::add('menu', App::SearchInside('menu', 'top-level'));
 
         add_action('plugins_loaded', array($this, 'getCurrentScreen'));
+    }
+
+    /**
+     * Get plugin Rating.
+     * 
+     * @since 1.1.6
+     */
+    public function getPluginRating() {
+
+        $pluginName = App::SearchInside('plugin', 'name');
+
+        $pluginsUrl = App::SearchInside('plugin', 'wp-plugins-url');
+
+        $pluginReview = $pluginsUrl . $pluginName . '/reviews/#new-post'; 
+        
+        $data['plugin-url-review'] = $pluginReview;        
+
+        $lastUpdate = get_option($pluginName . '-last-update');
+
+        $pluginRating = get_option($pluginName . '-rating');
+
+        if ((time() - $lastUpdate) > '172800') {
+
+            $pluginRating = $this->_getRatingInWordPress($pluginName);
+
+            update_option($pluginName . '-last-update', time());
+            update_option($pluginName . '-rating', $pluginRating);
+        }
+
+        $data['plugin-rating'] = $pluginRating;  
+
+        App::addOption('header-data', $data);
+    }
+
+    /**
+     * Get plugin rating in WordPRess.
+     * 
+     * @since 1.1.6
+     *
+     * @return string → stars rating HTML
+     */
+    private function _getRatingInWordPress($name) {
+
+        $pluginsUrl = App::SearchInside('plugin', 'wp-plugins-url');
+
+        $content = @file_get_contents($pluginsUrl . $name);
+
+        if ($content !== false) {
+
+            $from = explode('<div class="rating">', $content);
+            $to   = explode('</div>' , $from[1]);
+
+            $html = $to[0];
+
+            if (!empty($html) && !strpos($html, 'has not been rated')) {
+                
+                unset($from, $to);
+                return $html;
+            }
+        }
+        
+        return $this->_getRatingInWordPress('akismet');
     }
 
     /**
@@ -171,6 +235,8 @@ class Launcher extends Controller {
      * @return
      */
     public function getCurrentScreen() {
+
+        App::id('SearchInside');
 
         foreach (App::SearchInside('pages') as $page) {
 

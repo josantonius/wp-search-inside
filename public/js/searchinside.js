@@ -29,7 +29,7 @@
      */
     function ifAdminBar() {
         // Place it under the administration bar
-        if ($('#wpadminbar').length) {
+        if ($('#wpadminbar').length && $('body').width() > 600) {
             return $('#wpadminbar').height();
         }
         return 0;
@@ -43,16 +43,20 @@
     function keepAlwaysVisible(tag) {
 
         $(window).scroll(function(){
+            
+            // Keep visible only if it has been written in the input
+            if ($("#wpsi-search-input").val().length) {
 
-            var length = ifAdminBar();
-            var top    = $(document).scrollTop() + length;
+                var length = ifAdminBar();
+                var top    = $(document).scrollTop() + length;
 
-            if (top < tag) {
-                $('#searchinside').css('margin-top','0px');
-                $("#searchinside").addClass("appended");
-            } else {
-                $('#searchinside').css('margin-top',length+'px');
-                $("#searchinside").removeClass("appended");
+                if (top < tag) {
+                    $('#searchinside').css('margin-top','0px');
+                    $("#searchinside").addClass("appended");
+                } else {
+                    $('#searchinside').css('margin-top',length+'px');
+                    $("#searchinside").removeClass("appended");
+                }
             }
         });
     }
@@ -212,6 +216,7 @@
             $('#searchinside').css('margin-top',length+'px');
         
         } else {
+            console.log(config);
             $form.appendTo('#' + config.idContainer);
             $form.addClass('appended');
         } 

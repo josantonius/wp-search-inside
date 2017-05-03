@@ -1,0 +1,118 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Search Inside\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-29 02:49+0000\n"
+"PO-Revision-Date: 2017-03-29 02:49+0000\n"
+"Last-Translator: Josantonius <hello@josantonius.com>\n"
+"Language-Team: Spanish (Spain)\n"
+"Language: es-ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: src/template/elements/header.php:22
+msgid "Search Inside · Options"
+msgstr "Search Inside · Opciones"
+
+#: src/template/pages/options.php:22
+msgid "Plugin options"
+msgstr "Opciones del plugin"
+
+#: src/template/pages/options.php:28
+msgid "Choose the search engine settings"
+msgstr "Elige la configuración del buscador"
+
+#: src/template/pages/options.php:39
+msgid "HTML TAG ID WHERE TO SEARCH"
+msgstr "ID DEL TAG HTML DONDE BUSCAR"
+
+#: src/template/pages/options.php:51
+msgid "SEARCH ENGINE"
+msgstr "BUSCADOR"
+
+#: src/template/pages/options.php:62
+msgid "HTML TAG ID WHERE TO INSERT FORM"
+msgstr "ID DEL TAG HTML DONDE AÑADIR BUSCADOR"
+
+#: src/template/pages/options.php:77
+msgid "SEARCH FOR"
+msgstr "BUSCAR"
+
+#: src/template/pages/options.php:89
+msgid "Case sensitive"
+msgstr "Sensible a mayúsculas"
+
+#: src/template/pages/options.php:99
+msgid "Customize words colors"
+msgstr "Personalizar colores"
+
+#: src/template/pages/options.php:127
+msgid "Save"
+msgstr "Guardar"
+
+#: src/template/elements/footer.php:20
+msgid "Made with "
+msgstr "Hecho con"
+
+#: src/template/elements/footer.php:20
+msgid "by "
+msgstr "por"
+
+#: src/template/elements/footer.php:20
+msgid "App Developer"
+msgstr "Desarrollador de aplicaciones"
+
+#: src/Controller/Admin/Page/Options.php:181
+msgid "Off - Don't show"
+msgstr "Desactivado - No mostrar"
+
+#: src/Controller/Admin/Page/Options.php:183
+msgid "Show by pressing alphanumeric key"
+msgstr "Mostrar al pulsar tecla alfanumérica"
+
+#: src/Controller/Admin/Page/Options.php:185
+msgid "Show by pressing alphabetic key"
+msgstr "Mostrar al pulsar tecla alfabética"
+
+#: src/Controller/Admin/Page/Options.php:187
+msgid "Show by pressing numeric key"
+msgstr "Mostrar al pulsar tecla numérica"
+
+#: src/Controller/Admin/Page/Options.php:189
+msgid "Append to a html tag"
+msgstr "Incrustar dentro de etiqueta HTML"
+
+#: src/Controller/Admin/Page/Options.php:191
+msgid "Add from shortcode"
+msgstr "Agregar buscador desde shortcode"
+
+#: src/Controller/Admin/Page/Options.php:219
+msgid "Phrases and paragraphs"
+msgstr "Frases y párrafos"
+
+#: src/Controller/Admin/Page/Options.php:220
+msgid "Words"
+msgstr "Palabras"
+
+#. Name of the plugin
+msgid "Search Inside"
+msgstr "Search Inside"
+
+#. Description of the plugin
+msgid "Easily search text within your pages or blog posts."
+msgstr "Busca y remarca fácilmente frases o palabras en páginas y entradas."
+
+#. URI of the plugin
+msgid "https://github.com/Josantonius/Search-Inside.git"
+msgstr "https://github.com/Josantonius/Search-Inside.git"
+
+#. Author of the plugin
+msgid "Josantonius"
+msgstr "Josantonius"
+
+#. Author URI of the plugin
+msgid "https://josantonius.com/"
+msgstr "https://josantonius.com/"

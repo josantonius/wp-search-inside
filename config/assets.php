@@ -11,9 +11,10 @@
 
 use Eliasis\App\App;
 
-$json = App::SearchInside('url', 'json');
-$css  = App::SearchInside('url', 'css');
-$js   = App::SearchInside('url', 'js');
+$icons = App::SearchInside('url', 'icons');
+$json  = App::SearchInside('url', 'json');
+$css   = App::SearchInside('url', 'css');
+$js    = App::SearchInside('url', 'js');
 
 return [
 
@@ -65,7 +66,9 @@ return [
                 'deps'      => ['jquery'],
                 'version'   => '1.1.3',
                 'footer'    => true,
-                'params'    => [],
+                'params'    => [
+                    'icons_url' => $icons,
+                ],
             ],
         ],
 
