@@ -30,7 +30,7 @@ class Launcher extends Model {
      * @uses add_option()    → add a new option to Wordpress options
      * @uses update_option() → update a named option/value
      */
-    protected function setOptions() {
+    public function setOptions() {
 
         $pluginName = App::SearchInside()->get('slug');
 

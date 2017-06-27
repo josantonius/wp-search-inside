@@ -1,16 +1,14 @@
 === Search Inside ===
 Contributors: josantonius
 Donate link: https://paypal.me/Josantonius
-Tags: search engine, search inside entries, search inside pages, Wordpress search engine, highlighting words, highlight phrases, highlight paragraphs
-
-Requires at least: 3.5
+Tags: search-engine,wp-search-engine,highlight-words,highlight-phrases,highlight-paragraphs
 Tested up to: 4.8
 Stable tag: 1.1.7
+Requires at least: 3.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Easily search text within your pages or blog posts.
-
 
 == Description ==
 

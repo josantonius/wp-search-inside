@@ -29,7 +29,7 @@ class Uninstall extends Controller {
      * @uses delete_option()      → removes option by name
      * @uses delete_site_option() → removes a option by name
      */
-    public static function removeAll() {
+    public function removeAll() {
 
         $this->model->removeAll();
     }
