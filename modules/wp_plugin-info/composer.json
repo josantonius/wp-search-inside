@@ -1,0 +1,45 @@
+{
+    "name":        "josantonius/wp_plugin-info",
+    "version":     "1.0.0",
+    "description": "Get and save plugin information from WordPress API to be consumed by other modules.",
+    "type": "eliasis-module",
+    "keywords": [
+        "WordPress", 
+        "Plugin", 
+        "Eliasis",
+        "Component",
+        "Info",
+        "WordPress-API",
+        "PHP",
+        "HHVM"
+    ],
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name":     "Josantonius",
+            "email":    "hello@josantonius.com",
+            "homepage": "https://josantonius.com",
+            "role":     "Developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "lib/vendor",
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/Josantonius/wp_plugin-info/issues",
+        "forum": "http://stackoverflow.com/tags/wp_plugin-info",
+        "source": "https://github.com/Josantonius/wp_plugin-info"
+    },
+    "require": {
+        "php": "^5.3 || ^7.0",
+        "eliasis-framework/eliasis"    : "^1.0.9",
+        "composer/installers"          : "^1.3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eliasis\\Modules\\WP_Plugin_Info\\" : "src/"
+        }
+    }
+}

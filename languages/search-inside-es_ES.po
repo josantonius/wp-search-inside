@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Search Inside\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-03 20:31+0000\n"
-"PO-Revision-Date: 2017-05-03 20:32+0000\n"
+"POT-Creation-Date: 2017-06-25 16:09+0000\n"
+"PO-Revision-Date: 2017-06-25 16:11+0000\n"
 "Last-Translator: Josantonius <hello@josantonius.com>\n"
 "Language-Team: Spanish (Spain)\n"
 "Language: es-ES\n"
@@ -13,119 +13,139 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: src/template/elements/header.php:24
-msgid "Grifus Extensions"
-msgstr ""
-
-#: src/template/elements/header.php:26
-msgid "Rate plugin"
-msgstr "Valorar plugin"
-
-#: src/template/elements/header.php:48
-msgid ""
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eu bibendum "
-"ipsum. Ut vel nunc convallis, eleifend risus ac, ultricies elit. Nam sed "
-"lectus nisi. Nam convallis purus at risus suscipit, id placerat purus "
-"lobortis. Integer sit amet commodo felis. Sed commodo tempor nunc, ut "
-"ullamcorper elit ornare non. Aliquam vestibulum, nulla eget ultricies "
-"ullamcorper, libero felis sollicitudin leo, ut ornare velit mi id sem. "
-"Suspendisse potenti."
-msgstr ""
-
-#: src/template/elements/header.php:50
-msgid "Sed lobortis rhoncu"
-msgstr ""
-
-#: src/template/elements/header.php:50
-msgid "feedback"
-msgstr ""
-
-#: src/template/elements/header.php:50
-msgid "lorem ipsum dolor sit amet, consectetur adipiscing elit"
-msgstr ""
-
-#: src/template/elements/header.php:72
-msgid "CLOSE"
-msgstr "CERRAR"
-
-#: src/template/elements/footer.php:19
-msgid "Developed by "
-msgstr "Desarrollado por"
-
-#: src/template/pages/options.php:24
-msgid "Plugin options"
-msgstr "Opciones del plugin"
-
-#: src/template/pages/options.php:30
-msgid "Choose the search engine settings"
-msgstr "Elige la configuración del buscador"
-
-#: src/template/pages/options.php:41
-msgid "HTML TAG ID WHERE TO SEARCH"
-msgstr "ID DEL TAG HTML DONDE BUSCAR"
-
-#: src/template/pages/options.php:53
-msgid "SEARCH ENGINE"
-msgstr "BUSCADOR"
-
-#: src/template/pages/options.php:64
-msgid "HTML TAG ID WHERE TO INSERT FORM"
-msgstr "ID DEL TAG HTML DONDE AÑADIR BUSCADOR"
-
-#: src/template/pages/options.php:79
-msgid "SEARCH FOR"
-msgstr "BUSCAR"
-
-#: src/template/pages/options.php:91
-msgid "Case sensitive"
-msgstr "Sensible a mayúsculas"
-
-#: src/template/pages/options.php:101
-msgid "Customize words colors"
-msgstr "Personalizar colores"
-
-#: src/template/pages/options.php:129
-msgid "Save"
-msgstr "Guardar"
+#: src/template/layout/footer.php:19
+msgid "Author site"
+msgstr "Sitio del autor"
 
 #. Name of the plugin
-#: src/template/elements/header.php:44
+#: src/template/layout/header.php:26 src/template/layout/header.php:53
 msgid "Search Inside"
 msgstr "Search Inside"
 
-#: src/template/elements/footer.php:19
-msgid "App Developer"
-msgstr "Desarrollador de aplicaciones"
+#: src/template/layout/header.php:29
+msgid "Rate plugin"
+msgstr "Valorar plugin"
 
-#: src/Controller/Admin/Page/Options.php:192
+#: src/template/layout/header.php:57
+msgid ""
+"Hi! I'm Josantonius, the developer of this plugin. I would like to tell you "
+"something..."
+msgstr ""
+"¡Hola! Soy Josantonius, el desarrollador de este plugin. Quería contarte "
+"algo..."
+
+#: src/template/layout/header.php:59
+msgid ""
+"Did you know that you aren't using the free version of the plugin? This is "
+"the pro version at no cost to you. Why do I do this? Maybe some can not "
+"afford to buy it and I want to prevent it from being downloaded from any "
+"place infected with malicious code and ruin your website, I want you to try "
+"it freely and I want you to have the opportunity to collaborate on this"
+msgstr ""
+"¿Sabías que no estás utilizando la versión gratuita del plugin? esta es la "
+"versión pro sin coste alguno para ti. ¿Que por qué lo hago? Tal vez haya "
+"quien no pueda permitirse comprar este plugin y quiero evitar que lo "
+"descarguen desde cualquier lugar infectado con código malicioso y arruinen "
+"su sitio web, quiero que puedas probarlo libremente y que tengas la "
+"oportunidad de colaborar en este"
+
+#: src/template/layout/header.php:59
+msgid "open source project"
+msgstr "proyecto de código abierto"
+
+#: src/template/layout/header.php:59
+msgid "if you want it."
+msgstr "si así lo deseas."
+
+#: src/template/layout/header.php:61
+msgid "Your contribution and"
+msgstr "Tu contribución y"
+
+#: src/template/layout/header.php:61
+msgid "feedback"
+msgstr "comentarios"
+
+#: src/template/layout/header.php:61
+msgid ""
+"will help me keep updated and keep developing new versions for this plugin. "
+"Thank you!"
+msgstr ""
+"me ayudarán a mantener actualizado y a seguir desarrollando nuevas versiones "
+"para este plugin. ¡Gracias!"
+
+#: src/template/layout/header.php:83
+msgid "CLOSE"
+msgstr "CERRAR"
+
+#: src/template/layout/footer.php:19
+msgid "Developed by "
+msgstr "Desarrollado por"
+
+#: src/template/page/options.php:25
+msgid "Plugin options"
+msgstr "Opciones del plugin"
+
+#: src/template/page/options.php:31
+msgid "Choose the search engine settings"
+msgstr "Elige la configuración del buscador"
+
+#: src/template/page/options.php:42
+msgid "HTML TAG ID WHERE TO SEARCH"
+msgstr "ID DEL TAG HTML DONDE BUSCAR"
+
+#: src/template/page/options.php:54
+msgid "SEARCH ENGINE"
+msgstr "BUSCADOR"
+
+#: src/template/page/options.php:65
+msgid "HTML TAG ID WHERE TO INSERT FORM"
+msgstr "ID DEL TAG HTML DONDE AÑADIR BUSCADOR"
+
+#: src/template/page/options.php:80
+msgid "SEARCH FOR"
+msgstr "BUSCAR"
+
+#: src/template/page/options.php:92
+msgid "Case sensitive"
+msgstr "Sensible a mayúsculas"
+
+#: src/template/page/options.php:102
+msgid "Customize words colors"
+msgstr "Personalizar colores"
+
+#: src/template/page/options.php:130
+msgid "Save"
+msgstr "Guardar"
+
+#: src/Controller/Admin/Page/Options/Options.php:189
 msgid "Off - Don't show"
 msgstr "Desactivado - No mostrar"
 
-#: src/Controller/Admin/Page/Options.php:194
+#: src/Controller/Admin/Page/Options/Options.php:191
 msgid "Show by pressing alphanumeric key"
 msgstr "Mostrar al pulsar tecla alfanumérica"
 
-#: src/Controller/Admin/Page/Options.php:196
+#: src/Controller/Admin/Page/Options/Options.php:193
 msgid "Show by pressing alphabetic key"
 msgstr "Mostrar al pulsar tecla alfabética"
 
-#: src/Controller/Admin/Page/Options.php:198
+#: src/Controller/Admin/Page/Options/Options.php:195
 msgid "Show by pressing numeric key"
 msgstr "Mostrar al pulsar tecla numérica"
 
-#: src/Controller/Admin/Page/Options.php:200
+#: src/Controller/Admin/Page/Options/Options.php:197
 msgid "Append to a html tag"
 msgstr "Incrustar dentro de etiqueta HTML"
 
-#: src/Controller/Admin/Page/Options.php:202
+#: src/Controller/Admin/Page/Options/Options.php:199
 msgid "Add from shortcode"
 msgstr "Agregar buscador desde shortcode"
 
-#: src/Controller/Admin/Page/Options.php:232
+#: src/Controller/Admin/Page/Options/Options.php:229
 msgid "Phrases and paragraphs"
 msgstr "Frases y párrafos"
 
-#: src/Controller/Admin/Page/Options.php:233
+#: src/Controller/Admin/Page/Options/Options.php:230
 msgid "Words"
 msgstr "Palabras"
 

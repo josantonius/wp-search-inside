@@ -17,9 +17,10 @@ return [
 
     'url' => [
 
-        'js'    => $url . 'js'     . App::DS,
-        'css'   => $url . 'css'    . App::DS,
-        'json'  => $url . 'json'   . App::DS,
-        'icons' => $url . 'images' . App::DS . 'icons' . App::DS,
+        'js'         => $url . 'js/',
+        'css'        => $url . 'css/',
+        'json'       => $url . 'json/',
+        'icons'      => $url . 'images/icons/',
+        'wp-plugins' => 'https://wordpress.org/support/plugin/',
     ],
 ];

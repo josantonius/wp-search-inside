@@ -13,11 +13,13 @@ $DS = DIRECTORY_SEPARATOR;
 
 require 'lib' . $DS . 'vendor' . $DS .'autoload.php';
 
-use SearchInside\Controller\Uninstall;
+use Eliasis\App\App;
 
 if (!defined('WP_UNINSTALL_PLUGIN')) {
 
     exit();
 }
 
-Uninstall::removeAll();
+App::run(__DIR__, 'wordpress-plugin', 'SearchInside');
+
+App::SearchInside()->instance('Uninstall', 'controller')->removeAll();

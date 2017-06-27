@@ -11,7 +11,7 @@
 
 use Eliasis\App\App;
 
-$iconsUrl = App::SearchInside('url', 'icons');
+$iconsUrl = App::SearchInside()->get('url', 'icons');
 
 return [
 

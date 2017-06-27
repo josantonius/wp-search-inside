@@ -21,7 +21,13 @@ Busca y remarca fácilmente frases o palabras en páginas y entradas.
 
 Con Search Inside ahora puedes realizar búsquedas dentro de tus publicaciones o páginas en WordPress.
 
-** Hay diferentes formas de mostrar el Buscador **
+<p align="center">
+  <a href="https://youtu.be/zGfcX-l8WOE" title="Search Inside">
+  	<img src="resources/thumbnail-spanish-video.png">
+  </a>
+</p>
+
+**Tienes varias formas para mostrar el buscador**
 
 - El motor de búsqueda aparece cuando se pulsa cualquier tecla alfanumérica.
 
@@ -29,7 +35,7 @@ Con Search Inside ahora puedes realizar búsquedas dentro de tus publicaciones o
 
 - Insertarlo desde shortcode.
 
-** Dos modos de búsqueda **
+**Dos modos de búsqueda**
 
 - Buscar frases completas.
 

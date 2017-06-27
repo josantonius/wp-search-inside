@@ -21,6 +21,12 @@ Easily search text within your pages or blog posts.
 
 With Search Inside now you can search within your posts or pages. 
 
+<p align="center">
+  <a href="https://youtu.be/MCl9j7119uU" title="Search Inside">
+  	<img src="resources/thumbnail-english-video.png">
+  </a>
+</p>
+
 **There are different ways to display the search engine**
 
 - The search engine appears when you press any alphabetic or numeric key.

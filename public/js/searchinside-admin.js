@@ -12,78 +12,103 @@
     
    $(document).ready(function () {
 
-      /* Color picker */
+      /**
+       * Color picker.
+       *
+       * @since 1.1.7
+       */
+      function colorPicker() {
 
-      $('#colorsWrapper div').each(function() {
-         
-         $(this).css('background', $(this).attr('data-color'));
-      });
-
-      $('#colorsWrapper div').click(function() {
-
-         $('#wordColors').css('display', 'table');
-
-         $('.colorOption').removeClass('selected');
-
-         $(this).addClass('selected');
-         
-         $('#wordColors').val($(this).attr('data-color'));
-      });
-
-      $('#wordColors').on('input', function() {
-
-         $('.colorOption.selected').attr('data-color', $(this).val());
-
-         $('.colorOption.selected').css('background', $(this).val());
-      });
-
-      $(document).on('submit','#search-inside-form',function(e){
-         
-         var colors = [];
-
-         $('#wordColors').css('visibility', 'hidden');
-
-         $('#colorsWrapper div').each(function(index) {
+         $('#colorsWrapper div').each(function() {
             
-            colors[index] = $(this).attr('data-color');
+            $(this).css('background', $(this).attr('data-color'));
          });
 
-         $('#wordColors').val(JSON.parse(JSON.stringify(colors)));
-      
-      });
+         $('#colorsWrapper div').click(function() {
 
-      /* Select fields */
+            $('#wordColors').css('display', 'table');
 
-      if ($('#executeWith option:selected').val() !== 'append') {
+            $('.colorOption').removeClass('selected');
 
-         $('#wpsi-html-tag').fadeOut(200);
+            $(this).addClass('selected');
+            
+            $('#wordColors').val($(this).attr('data-color'));
+         });
+
+         $('#wordColors').on('input', function() {
+
+            $('.colorOption.selected').attr('data-color', $(this).val());
+
+            $('.colorOption.selected').css('background', $(this).val());
+         });
       }
 
-      if ($('#executeWith option:selected').val() !== 'shortcode') {
+      /**
+       * On submit form.
+       *
+       * @since 1.1.7
+       */
+      function submitForm() {
 
-         $('#wpsi-shortcode').fadeOut(200);
+         $(document).on('submit','#search-inside-form',function(e){
+            
+            var colors = [];
+
+            $('#wordColors').css('visibility', 'hidden');
+
+            $('#colorsWrapper div').each(function(index) {
+               
+               colors[index] = $(this).attr('data-color');
+            });
+
+            $('#wordColors').val(JSON.parse(JSON.stringify(colors)));
+         
+         });
       }
 
-      $('#executeWith').on('change', function() {
+      /**
+       * Select fields.
+       *
+       * @since 1.1.7
+       */
+      function selectsHandler() {
 
-         if (this.value == 'append') {
-            
-            $('#wpsi-shortcode').fadeOut(200);
-            $('#wpsi-html-tag').fadeIn(200);
-         
-         } else if (this.value == 'shortcode') {
-            
-            $('#wpsi-html-tag').fadeOut(200);
-            $('#wpsi-shortcode').fadeIn(200);
-         
-         } else {
+         if ($('#executeWith option:selected').val() !== 'append') {
 
             $('#wpsi-html-tag').fadeOut(200);
+         }
+
+         if ($('#executeWith option:selected').val() !== 'shortcode') {
+
             $('#wpsi-shortcode').fadeOut(200);
          }
 
-      });
+         $('#executeWith').on('change', function() {
 
+            if (this.value == 'append') {
+               
+               $('#wpsi-shortcode').fadeOut(200);
+               $('#wpsi-html-tag').fadeIn(200);
+            
+            } else if (this.value == 'shortcode') {
+               
+               $('#wpsi-html-tag').fadeOut(200);
+               $('#wpsi-shortcode').fadeIn(200);
+            
+            } else {
+
+               $('#wpsi-html-tag').fadeOut(200);
+               $('#wpsi-shortcode').fadeOut(200);
+            }
+
+         });
+      }
+
+      /**
+       * Dialog settings.
+       *
+       * @since 1.0.0
+       */
       function setModal(id) {
 
           var dialog = document.querySelector('dialog');
@@ -111,14 +136,21 @@
        * Dogecoin Donate Button
        * @author Felix Yadomi
        * @link   http://codepen.io/yadomi/pen/EGiKD
+       * @since 1.1.6
        */
       function bitcoinButton() {
 
          $(function(){
-           var btn = '<div class="symbol"><img id ="symbol" src="' + searchinsideadmin.icons_url +'bitcoin.png"> </div><p><span class="currency">Bitcoin</span></p>';
-           $('.btn-dogecoin').each(function(){
-             $(this).append(btn);
-           });
+            var url = searchinsideAdmin.icons_url;
+            var btn = '<div class="symbol">' +
+                        '<img id ="symbol" src="' + url +'bitcoin.png">' +
+                      '</div>' +
+                      '<p>' +
+                        '<span class="currency">Bitcoin</span>' +
+                      '</p>';
+            $('.btn-dogecoin').each(function(){
+               $(this).append(btn);
+            });
             $('.btn-dogecoin').click(function(event) {
                var that = this;
                $(this).addClass('opened');  
@@ -132,19 +164,59 @@
          });
       }
 
-      animation = function(){
-        
-         $("#donate-button i").fadeTo(1000, .1)
-                              .fadeTo(1000, 1);
+      /**
+       * Footer handler.
+       *
+       * @since 1.1.6
+       */
+      function appendToFooter() {
+
+         if ($('body').width() < 783) {
+
+            $('#jst-footer').appendTo("#wpwrap").fadeIn();
+
+         } else {
+
+            $('#jst-footer').appendTo("#wpfooter").fadeIn();
+         }
+
+         $('#jst-support').appendTo("#wpwrap").fadeIn();
       }
 
-      setInterval(animation, 60000);
+      /**
+       * Header button right.
+       *
+       * @since 1.1.6
+       */
+      function animateButton() {
+
+         var animation = function(){
+           
+            $("#donate-button i").fadeTo(1000, .1)
+                                 .fadeTo(1000, 1);
+         }
+
+         setInterval(animation, 60000);
+      }
+
+      colorPicker();
+
+      submitForm();
+
+      selectsHandler()
+
+      animateButton();
 
       bitcoinButton();
 
       setModal('#donate-button');
 
-      $('#jst-footer').appendTo("#wpfooter").fadeIn();
+      appendToFooter();
+
+      $(window).resize(function() {
+
+         appendToFooter();
+      });
 
     });
 

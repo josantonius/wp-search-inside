@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit7bc6a48da84e79e8896d473fa030789b
+class ComposerStaticInit85a746d38f0404cd5476f6246655df37
 {
     public static $prefixLengthsPsr4 = array (
         'S' => 
@@ -21,6 +21,8 @@ class ComposerStaticInit7bc6a48da84e79e8896d473fa030789b
         ),
         'E' => 
         array (
+            'Eliasis\\Modules\\WP_Plugin_Info\\' => 31,
+            'Eliasis\\Module\\' => 15,
             'Eliasis\\' => 8,
         ),
         'C' => 
@@ -54,6 +56,14 @@ class ComposerStaticInit7bc6a48da84e79e8896d473fa030789b
         array (
             0 => __DIR__ . '/..' . '/josantonius/hook/src',
         ),
+        'Eliasis\\Modules\\WP_Plugin_Info\\' => 
+        array (
+            0 => __DIR__ . '/../../..' . '/modules/wp_plugin-info/src',
+        ),
+        'Eliasis\\Module\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/eliasis-framework/module/src',
+        ),
         'Eliasis\\' => 
         array (
             0 => __DIR__ . '/..' . '/eliasis-framework/eliasis/src',
@@ -67,8 +77,8 @@ class ComposerStaticInit7bc6a48da84e79e8896d473fa030789b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit7bc6a48da84e79e8896d473fa030789b::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit7bc6a48da84e79e8896d473fa030789b::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit85a746d38f0404cd5476f6246655df37::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit85a746d38f0404cd5476f6246655df37::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

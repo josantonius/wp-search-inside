@@ -5,7 +5,7 @@
  * Plugin Name: Search Inside
  * Plugin URI:  https://github.com/Josantonius/Search-Inside.git
  * Description: Easily search text within your pages or blog posts.
- * Version:     1.1.6
+ * Version:     1.1.7
  * Author:      Josantonius
  * Author URI:  https://josantonius.com/ 
  * License:     GPL-2.0+
@@ -16,6 +16,7 @@
 
 use Eliasis\App\App;
 
+$DS = DIRECTORY_SEPARATOR;                                                                         
 /** 
  * Don't expose information if this file called directly.
  */
@@ -24,23 +25,30 @@ if (!function_exists('add_action') || !defined('ABSPATH')) {
     echo 'I can do when called directly.'; die;
 }
 
-$DS = DIRECTORY_SEPARATOR;
-
-define('SEARCHINSIDE', 'SearchInside');
-
+/** 
+ * Classloader.
+ */
 require 'lib' . $DS . 'vendor' . $DS .'autoload.php';
 
-App::run(__DIR__, 'wordpress-plugin', SEARCHINSIDE);
+/** 
+ * Start application.
+ */
+App::run(__DIR__, 'wordpress-plugin', 'SearchInside');
 
-$namespace = App::SearchInside('namespace', 'controller');
+/** 
+ * Get main instance.
+ */
+$Launcher = App::instance('Launcher', 'controller');
 
-$method =  $namespace . 'Launcher::getInstance';
-
-$Launcher = call_user_func($method);
-
+/** 
+ * Register hooks.
+ */
 register_activation_hook(__FILE__, [$Launcher, 'activation']);
 
 register_deactivation_hook(__FILE__, [$Launcher, 'deactivation']);
 
+/** 
+ * Launch application.
+ */
 $Launcher->init();
 ?>

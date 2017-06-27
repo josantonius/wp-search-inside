@@ -216,7 +216,7 @@
             $('#searchinside').css('margin-top',length+'px');
         
         } else {
-            console.log(config);
+            
             $form.appendTo('#' + config.idContainer);
             $form.addClass('appended');
         } 

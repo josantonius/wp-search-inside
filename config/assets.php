@@ -11,10 +11,10 @@
 
 use Eliasis\App\App;
 
-$icons = App::SearchInside('url', 'icons');
-$json  = App::SearchInside('url', 'json');
-$css   = App::SearchInside('url', 'css');
-$js    = App::SearchInside('url', 'js');
+$icons = App::SearchInside()->get('url', 'icons');
+$json  = App::SearchInside()->get('url', 'json');
+$css   = App::SearchInside()->get('url', 'css');
+$js    = App::SearchInside()->get('url', 'js');
 
 return [
 
@@ -26,10 +26,10 @@ return [
                 'url'       => $js . 'searchinside.js',
                 'place'     => 'front',
                 'deps'      => ['jquery'],
-                'version'   => '1.1.3',
+                'version'   => '1.1.6',
                 'footer'    => true,
                 'params'    => [
-                    'settings' => $json . App::SearchInside('file', 'settings'),
+                    'settings' => $json . App::SearchInside()->get('file', 'settings'),
                 ],
             ],
             'hilitor' => [
@@ -37,7 +37,7 @@ return [
                 'url'       => $js . 'hilitor.js',
                 'place'     => 'front',
                 'deps'      => ['jquery'],
-                'version'   => '1.1.3',
+                'version'   => '1.1.6',
                 'footer'    => true,
                 'params'    => [],
             ],
@@ -46,7 +46,7 @@ return [
                 'url'       => $js . 'material.min.js',
                 'place'     => 'admin',
                 'deps'      => ['jquery'],
-                'version'   => '1.1.3',
+                'version'   => '1.1.6',
                 'footer'    => true,
                 'params'    => [],
             ],
@@ -55,16 +55,16 @@ return [
                 'url'       => $js . 'mdl-select.js',
                 'place'     => 'admin',
                 'deps'      => ['jquery'],
-                'version'   => '1.1.3',
+                'version'   => '1.1.6',
                 'footer'    => true,
                 'params'    => [],
             ],
-            'searchinsideadmin' => [
-                'name'      => 'searchinsideadmin',
+            'searchinsideAdmin' => [
+                'name'      => 'searchinsideAdmin',
                 'url'       => $js . 'searchinside-admin.js',
                 'place'     => 'admin',
                 'deps'      => ['jquery'],
-                'version'   => '1.1.3',
+                'version'   => '1.1.6',
                 'footer'    => true,
                 'params'    => [
                     'icons_url' => $icons,
@@ -78,31 +78,15 @@ return [
                 'url'       => $css . 'searchinside.css',
                 'place'     => 'front',
                 'deps'      => [],
-                'version'   => '1.1.3',
+                'version'   => '1.1.6',
                 'media'     => '',
             ],
-            'searchinsideadmin' => [
-                'name'      => 'searchinsideadmin',
+            'searchinsideAdmin' => [
+                'name'      => 'searchinsideAdmin',
                 'url'       => $css . 'searchinside-admin.css',
                 'place'     => 'admin',
                 'deps'      => [],
-                'version'   => '1.1.3',
-                'media'     => '',
-            ],
-            'material' => [
-                'name'      => 'material',
-                'url'       => $css . 'material.css',
-                'place'     => 'admin',
-                'deps'      => [],
-                'version'   => '1.1.3',
-                'media'     => '',
-            ],
-            'materialicons' => [
-                'name'      => 'materialicons',
-                'url'       => $css . 'material-icons.css',
-                'place'     => 'admin',
-                'deps'      => [],
-                'version'   => '1.1.3',
+                'version'   => '1.1.6',
                 'media'     => '',
             ],
         ],

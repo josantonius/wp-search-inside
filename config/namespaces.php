@@ -9,11 +9,15 @@
  * @since      1.1.3
  */
 
+$pluginName = 'SearchInside';
+
 return [
 
-    'namespace' => [
-
-        'admin-page' => SEARCHINSIDE . '\\Controller\\Admin\\Page\\',
-        'controller' => SEARCHINSIDE . '\\Controller\\',
+    'namespaces' => [
+    
+        'modules'         => $pluginName . '\\Modules\\',
+        'admin-page'      => $pluginName . '\\Controller\\Admin\\Page\\',
+        'admin-component' => $pluginName . '\\Controller\\Admin\\Component\\',
+        'controller'      => $pluginName . '\\Controller\\',
     ],
 ];

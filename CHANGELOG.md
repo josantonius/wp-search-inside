@@ -1,5 +1,113 @@
 # CHANGELOG
 
+## 1.1.7 - 2017-06-25
+
+* Added `SearchInside\Controller\Launcher\Launcher` class.
+* Added `SearchInside\Controller\Launcher\Launcher::init()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->activation()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->deactivation()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->addShortcode()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->setLanguage()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->admin()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->front()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->addScripts()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->addStyles()` method.
+* Added `SearchInside\Controller\Launcher\Launcher->setMenus()` method.
+
+* Deleted `SearchInside\Controller\Launcher` class.
+* Deleted `SearchInside\Controller\Launcher::init()` method.
+* Deleted `SearchInside\Controller\Launcher->activation()` method.
+* Deleted `SearchInside\Controller\Launcher->setVersion()` method.
+* Deleted `SearchInside\Controller\Launcher->deactivation()` method.
+* Deleted `SearchInside\Controller\Launcher->addShortcode()` method.
+* Deleted `SearchInside\Controller\Launcher->setLanguage()` method.
+* Deleted `SearchInside\Controller\Launcher->setHooks()` method.
+* Deleted `SearchInside\Controller\Launcher->admin()` method.
+* Deleted `SearchInside\Controller\Launcher->getCurrentScreen()` method.
+* Deleted `SearchInside\Controller\Launcher->front()` method.
+* Deleted `SearchInside\Controller\Launcher->addScripts()` method.
+* Deleted `SearchInside\Controller\Launcher->addStyles()` method.
+* Deleted `SearchInside\Controller\Launcher->getPluginRating()` method.
+* Deleted `SearchInside\Controller\Launcher->_getRatingInWordPress()` method.
+
+* Added `SearchInside\Model\Launcher\Launcher->setOptions()` method.
+
+* Deleted `SearchInside\Controller\Uninstall` class.
+* Deleted `SearchInside\Controller\Uninstall::removeAll()` method.
+
+* Added `SearchInside\Controller\Uninstall\Uninstall` class.
+* Added `SearchInside\Controller\Uninstall\Uninstall::removeAll()` method.
+
+* Added `SearchInside\Model\Uninstall\Uninstall` class.
+* Added `SearchInside\Model\Uninstall\Uninstall::removeAll()` method.
+
+* Deleted `SearchInside\Controller\Admin\Page\Options` class.
+* Deleted `SearchInside\Controller\Admin\Page\Options::init()` method.
+* Deleted `SearchInside\Controller\Admin\Page\Options->addSubmenuPage()` method.
+* Deleted `SearchInside\Controller\Admin\Page\Options->addScripts()` method.
+* Deleted `SearchInside\Controller\Admin\Page\Options->addStyles()` method.
+* Deleted `SearchInside\Controller\Admin\Page\Options->checkRequest()` method.
+* Deleted `SearchInside\Controller\Admin\Page\Options->addHooks()` method.
+* Deleted `SearchInside\Controller\Admin\Page\Options->selectOptionsOne()` method.
+* Deleted `SearchInside\Controller\Admin\Page\Options->selectOptionsTwo()` method.
+* Deleted `SearchInside\Controller\Admin\Page\Options->render()` method.
+
+* Deleted `SearchInside\Model\Admin\Page\Options` class.
+* Deleted `SearchInside\Model\Admin\Page\Options->__construct()` method.
+* Deleted `SearchInside\Model\Admin\Page\Options->getSettings()` method.
+* Deleted `SearchInside\Model\Admin\Page\Options->setSettings()` method.
+
+* Added `SearchInside\Controller\Admin\Page\Options\Options` class.
+* Added `SearchInside\Controller\Admin\Page\Options\Options::init()` method.
+* Added `SearchInside\Controller\Admin\Page\Options\Options->addScripts()` method.
+* Added `SearchInside\Controller\Admin\Page\Options\Options->addStyles()` method.
+* Added `SearchInside\Controller\Admin\Page\Options\Options->checkRequest()` method.
+* Added `SearchInside\Controller\Admin\Page\Options\Options->selectOptionsOne()` method.
+* Added `SearchInside\Controller\Admin\Page\Options\Options->selectOptionsTwo()` method.
+* Added `SearchInside\Controller\Admin\Page\Options\Options->setMenu()` method.
+* Added `SearchInside\Controller\Admin\Page\Options\Options->setSubmenu()` method.
+* Added `SearchInside\Controller\Admin\Page\Options\Options->render()` method.
+
+* Added `SearchInside\Model\Admin\Page\Options\Options` class.
+* Added `SearchInside\Model\Admin\Page\Options\Options->__construct()` method.
+* Added `SearchInside\Model\Admin\Page\Options\Options->getSettings()` method.
+* Added `SearchInside\Model\Admin\Page\Options\Options->setSettings()` method.
+
+* Added `SearchInside\Model\Admin\Component\Rating\Rating->getPluginRating()` method.
+* Added `SearchInside\Model\Admin\Component\Rating\Rating->prepareStars()` method.
+
+* Deleted `search-inside/config/paths.php` file.
+* Added   `search-inside/config/add-paths.php` file.
+* Deleted `search-inside/config/hooks.php` file.
+* Added   `search-inside/config/set-hooks.php` file.
+
+* Deleted `search-inside/public/css/material.css` file.
+* Deleted `search-inside/public/css/material-icons.css` file.
+
+* Deleted `search-inside/public/sass/admin/custom/_global.sass` file.
+* Deleted `search-inside/public/sass/admin/custom/_layout.sass` file.
+
+* Deleted `search-inside/public/sass/admin/partials/_wp.rating.sass` file.
+* Added   `search-inside/public/sass/admin/partials/_rating.sass` file.
+* Added   `search-inside/public/sass/admin/partials/_global.sass` file.
+* Added   `search-inside/public/sass/admin/partials/_layout.sass` file.
+
+* Added   `search-inside/public/sass/admin/external/_material.sass` file.
+* Added   `search-inside/public/sass/admin/external/_material-icons.sass` file.
+
+* Deleted `search-inside/src/template/layout/default.php` file.
+* Added   `search-inside/src/template/layout/header.php` file.
+* Added   `search-inside/src/template/layout/footer.php` file.
+
+* Deleted `search-inside/src/template/pages/options.php` file.
+
+* Added `search-inside/src/template/page/options.php` file.
+
+* Added `search-inside/src/template/component/rating.php` file.
+
+* Added `Josantonius/WP_Plugin-Info` library.
+* Added `eliasis-framework/module` library.
+
 ## 1.1.6 - 2017-05-03
 
 * Eliasis Framework has been updated to version 1.0.5.

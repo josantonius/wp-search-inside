@@ -2,7 +2,6 @@
 /**
  * Library for handling hooks.
  * 
- * @author     Daveismyname - dave@daveismyname.com 
  * @author     Josantonius  - hello@josantonius.com
  * @copyright  Copyright (c) 2017
  * @license    https://opensource.org/licenses/MIT - The MIT License (MIT)
@@ -22,22 +21,49 @@ use Josantonius\Hook\Exception\HookException;
 class Hook {
 
     /**
-     * Available hooks.
+     * Instance id.
      *
-     * @since 1.0.0
+     * @since 1.0.5
+     *
+     * @var int
+     */
+    protected static $id = '0';
+
+    /**
+     * Callbacks.
+     *
+     * @since 1.0.3
      *
      * @var array
      */
-    private static $_hooks = array();
+    protected $callbacks = [];
 
     /**
-     * Method name to use the singleton pattern and just create an instance.
+     * Number of actions executed.
+     *
+     * @since 1.0.3
+     *
+     * @var array
+     */
+    protected $actions = ['count' => 0];
+
+    /**
+     * Current action hook.
+     *
+     * @since 1.0.3
+     *
+     * @var string|false
+     */
+    protected static $current = false;
+
+    /**
+     * Method to use the singleton pattern and just create an instance.
      *
      * @since 1.0.0
      *
      * @var string
      */
-    private static $_singleton = 'getInstance';
+    protected $singleton = 'getInstance';
 
     /**
      * Instances.
@@ -46,7 +72,7 @@ class Hook {
      *
      * @var array
      */
-    private static $_instances = array();
+    private static $_instances = [];
 
     /**
      * Get instance.
@@ -57,24 +83,16 @@ class Hook {
      *
      * @return object → instance
      */
-    public static function getInstance($id = 0) {
+    public static function getInstance($id = '0') {
+
+        self::$id = $id;
         
-        if (isset(self::$_instances[$id])) {
+        if (isset(self::$_instances[self::$id])) {
 
-            return self::$_instances[$id];
+            return self::$_instances[self::$id];
         } 
-
-        self::setHook([
-            'meta',
-            'css',
-            'after-body',
-            'footer',
-            'js',
-            'launch',
-            'routes'
-        ]);
-
-        return self::$_instances[$id] = new self;
+        
+        return self::$_instances[self::$id] = new self;
     }
 
     /**
@@ -86,66 +104,50 @@ class Hook {
      */
     public static function setSingletonName($method) {
 
-        self::$_singleton = $method;
+        $that = self::getInstance(self::$id);
+
+        $that->singleton = $method;
     }
 
     /**
-     * Add hook/hooks to hook list.
+     * Attach custom function to action hook.
      *
-     * @since 1.0.0
+     * @since 1.0.3
      *
-     * @param string|array $where → hook to add
+     * @param string   $tag      → action hook name
+     * @param callable $func     → function to attach to action hook
+     * @param int      $priority → order in which the action is executed
+     * @param int      $args     → number of arguments accepted
      *
-     * @return int → number hooks added
+     * @return boolean
      */
-    public static function setHook($where) {
+    public static function addAction($tag, $func, $priority=8, $args=0) {
 
-        if (!is_array($where)) {
+        $that = self::getInstance(self::$id);
 
-            self::$_hooks[$where] = '';
+        $that->callbacks[$tag][$priority][] = [
 
-            return 1;
-        }
-
-        foreach ($where as $where) {
-
-            self::$_hooks[$where] = '';
-        }
-
-        return count($where);
+            'function'  => $func,
+            'arguments' => $args
+        ];
+        
+        return true;
     }
 
     /**
-     * Attach custom function to hook.
+     * Add actions hooks from array.
      *
-     * @since 1.0.0
+     * @since 1.0.3
      *
-     * @param array|string $where    → hook to use
-     * @param string       $function → function to attach to hook
+     * @param array $actions
      *
-     * @throws HookException → hook location not defined
-     * @return boolean       → success with adding
+     * @return boolean
      */
-    public static function addHook($where, $function = '') {
+    public static function addActions($actions) {
 
-        if (!is_array($where)) {
+        foreach ($actions as $arguments) {
 
-            $where = [$where => $function];
-        }
-
-        foreach ($where as $hook => $function) {
-
-            if (!isset(self::$_hooks[$hook])) {
-
-                $message = 'Hook location not defined';
-                
-                throw new HookException($message . ': ' . $hook, 811);
-            }
-
-            $theseHooks   = explode('|', self::$_hooks[$hook]);
-            $theseHooks[] = $function;
-
-            self::$_hooks[$hook] = implode('|', $theseHooks);
+            call_user_func_array([__CLASS__, 'addAction'], $arguments);
         }
 
         return true;
@@ -154,84 +156,161 @@ class Hook {
     /**
      * Run all hooks attached to the hook.
      *
-     * By default it will look for the 'getInstance' method to use singleton 
+     * By default it will look for getInstance method to use singleton 
      * pattern and create a single instance of the class. If it does not
      * exist it will create a new object.
      *
      * @see setSingletonName() for change the method name.
      *
-     * @since 1.0.0
+     * @since 1.0.3
      *
-     * @param  string $where          → hook to run
-     * @param  string $args           → optional arguments
+     * @param  string  $tag    → action hook name
+     * @param  mixed   $args   → optional arguments
+     * @param  boolean $remove → delete hook after executing actions
      *
-     * @throws HookException → the hook is not yet known
-     * @return object|false  → returns the calling function
+     * @return returns the output of the last action or false
      */
-    public static function run($where, $args='') {
+    public static function doAction($tag, $args = [], $remove = true) {
 
-        if (!isset(self::$_hooks[$where])) {
+        $that = self::getInstance(self::$id);
 
-            $message = 'Hook location not defined';
-            
-            throw new HookException($message . ': ' . $where, 811);
+        self::$current = $tag;
+
+        $that->actions['count']++;
+
+        if (!array_key_exists($tag, $that->actions)) {
+
+            $that->actions[$tag] = 0;
         }
 
-        $theseHooks = explode('|', self::$_hooks[$where]);
+        $that->actions[$tag]++;
 
-        foreach ($theseHooks as $hook) {
+        $actions = $that->_getActions($tag, $remove);
 
-            if (preg_match("/@/i", $hook)) {
+        asort($actions);
 
-                $parts = explode('/', $hook);
+        foreach ($actions as $priority) {
 
-                $last = end($parts);
+            foreach ($priority as $action) {
 
-                $segments = explode('@', $last);
-
-                $class = $segments[0];
-
-                $method = $segments[1];
-
-                if (method_exists($class, self::$_singleton)) {
-
-                    $instance = call_user_func([$class, self::$_singleton]); 
-
-                    call_user_func([$instance, $method], $args);
-
-                    continue;
-                }
-
-                $instance = new $class;
-
-                call_user_func([$instance, $method], $args);
-                    
-            } else {
-
-                if (function_exists($hook)) {
-
-                    call_user_func($hook, $result);
-                }
+                $action = $that->_runAction($action, $args);
             }
+        }
+
+        self::$current = false;
+
+        return (isset($action)) ? $action : false;
+    }
+
+    /**
+     * Run action hook.
+     *
+     * @since 1.0.3
+     *
+     * @param string  $action → action hook
+     * @param int     $args   → arguments
+     *
+     * @return callable|false → returns the calling function
+     */
+    private function _runAction($action, $args) {
+
+        $function   = $action['function'];
+        $argsNumber = $action['arguments'];
+
+        $class  = (isset($function[0])) ? $function[0] : false;
+        $method = (isset($function[1])) ? $function[1] : false;
+
+        $args = $this->_getArguments($argsNumber, $args);
+
+        if (!($class && $method) && function_exists($function)) {
+
+            return call_user_func($function, $args);
+
+        } else if ($obj = call_user_func([$class, $this->singleton])) {
+
+            if ($obj !== false) {
+
+                return call_user_func_array([$obj, $method], $args);
+            }
+
+        } else {
+
+            $instance = new $class;
+
+            return call_user_func_array([$instance, $method], $args);
         }
     }
 
     /**
-     * Execute hooks attached to run and collect instead of running.
+     * Get actions for hook
      *
-     * @since 1.0.0
+     * @since 1.0.3
      *
-     * @param string $where → hook
-     * @param string $args  → optional arguments
+     * @param string  $tag    → action hook name
+     * @param boolean $remove → delete hook after executing actions
      *
-     * @return object → returns output of hook call
+     * @return object|false → returns the calling function
      */
-    public function collectHook($where, $args = null) {
+    private function _getActions($tag, $remove) {
 
-        ob_start();
+        if (isset($this->callbacks[$tag])) {
 
-        echo $this->run($where, $args);
+            $actions = $this->callbacks[$tag];
 
-        return ob_get_clean();
+            if ($remove) {
+
+                unset($this->callbacks[$tag]);
+            }
+        }
+
+        return (isset($actions)) ? $actions : [];
+    }
+
+    /**
+     * Get arguments for action.
+     *
+     * @since 1.0.3
+     *
+     * @param int   $argsNumber → arguments number
+     * @param mixed $arguments  → arguments
+     *
+     * @return array → arguments
+     */
+    private function _getArguments($argsNumber, $arguments) {
+
+        if ($argsNumber == 1 && is_string($arguments)) {
+
+            return [$arguments];
+
+        } else if ($argsNumber === count($arguments)) {
+
+            return $arguments;
+        }
+
+        for ($i=0; $i < $argsNumber; $i++) {
+
+            if (array_key_exists($i, $arguments)) {
+            
+                $args[] = $arguments[$i];
+
+                continue;
+            }
+
+            return $args;
+        }
+
+        return [];
+    }
+
+    /**
+     * Returns the current action hook.
+     *
+     * @since 1.0.3
+     *
+     * @return string|false → current action hook
+     */
+    public static function current() {
+
+        return self::$current;
     }
 }
