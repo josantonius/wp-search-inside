@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.1.8 - 2017-08-28
+
+* Deprecated `SearchInside\Controller\Admin\Page\Options\Options::init()` method.
+
+* Fixed bug in `WP_ Register` Library: the `IsSet()` method was renamed to `isEnqueued()` to avoid errors with the reserved word `Isset` in versions prior to php 7.0.
+
 ## 1.1.7 - 2017-06-25
 
 * Added `SearchInside\Controller\Launcher\Launcher` class.

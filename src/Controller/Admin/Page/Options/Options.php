@@ -40,18 +40,20 @@ class Options extends Controller {
      *
      * @var array $data
      */
-    public $data = 'searchinside-options';
+    public $data;
 
     /**
      * Class initializer method.
      *
      * @since 1.1.7
+     *
+     * @deprecated 1.1.8
      */
     public function init() {
         
-        $this->addScripts();
-        $this->addStyles();
-        $this->checkRequest();
+        //$this->addScripts();
+        //$this->addStyles();
+        //$this->checkRequest();
     }
 
     /**
@@ -252,6 +254,8 @@ class Options extends Controller {
      * @since 1.1.7
      */
     public function render() {
+
+        $this->checkRequest();
 
         Hook::getInstance(App::$id);
 

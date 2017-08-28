@@ -3,7 +3,7 @@ Contributors: josantonius
 Donate link: https://paypal.me/Josantonius
 Tags: search-engine,wp-search-engine,highlight-words,highlight-phrases,highlight-paragraphs
 Tested up to: 4.8
-Stable tag: 1.1.7
+Stable tag: 1.1.8
 Requires at least: 3.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -86,6 +86,11 @@ Yes, it is compatible.
 Search Inside is available in english and spanish language.
 
 == Changelog ==
+= 1.1.8 =
+
+* Deprecated `SearchInside\Controller\Admin\Page\Options\Options::init()` method.
+
+* Fixed bug in `WP_ Register` Library: the `IsSet()` method was renamed to `isEnqueued()` to avoid errors with the reserved word `Isset` in versions prior to php 7.0.
 
 = 1.1.7 =
 * Added `SearchInside\Controller\Launcher\Launcher` class.
@@ -399,6 +404,13 @@ Search Inside is available in english and spanish language.
 * Added `search-inside/assets/inc/settings.jsond` file.
 
 == Upgrade Notice ==
+= 1.1.8 =
+
+* Fixed bug in `WP_ Register` Library: the `IsSet()` method was renamed to `isEnqueued()` to avoid errors with the reserved word `Isset` in versions prior to php 7.0.
+
+= 1.1.7 =
+Changes in methods.
+
 = 1.1.6 =
 * Eliasis Framework has been updated to version 1.0.5.
 
