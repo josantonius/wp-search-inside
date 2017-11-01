@@ -43,6 +43,10 @@ With Search Inside now you can search within your posts or pages.
 
 Don't forget to turn on case sensitive mode if you need it!
 
+**Search Inside has full support for UTF-8 encoding and can search in any language.**
+
+![image](resources/search-inside-1.1.9.png)
+
 ### Installation
 
 You can download this plugin from the [official repository](https://es.wordpress.org/plugins/search-inside/) in WordPress.
@@ -77,7 +81,7 @@ Once Activated:
 
 ### Requirements
 
-This pluggin is supported by PHP versions 5.3 or higher and is compatible with HHVM versions 3.0 or higher.
+This pluggin is supported by PHP versions 5.6 or higher and is compatible with HHVM versions 3.0 or higher.
 
 ### Images
 

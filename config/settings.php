@@ -12,7 +12,7 @@
 return [
 
 	'slug' 				  => dirname(dirname(plugin_basename( __FILE__))),
-	'version'             => '1.1.7',
-    'minimum_wp_version'  => '3.8',
-    'minimum_php_version' => '5.3',
+	'version'             => '1.1.9',
+    'minimum_wp_version'  => '4.0',
+    'minimum_php_version' => '5.6',
 ];

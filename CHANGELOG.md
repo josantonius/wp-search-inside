@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.1.9 - 2017-11-01
+
+* Fixed error in options page when activating sensitive case.
+
+* Full support for `UTF-8` has been implemented and now searchable in any language.
+
+* An error was provisionally patched when the plugin rating was displayed.
+
 ## 1.1.8 - 2017-08-28
 
 * Deprecated `SearchInside\Controller\Admin\Page\Options\Options::init()` method.

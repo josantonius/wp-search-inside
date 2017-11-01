@@ -67,15 +67,15 @@ class Rating extends Controller {
 
         $stars = [];
 
-        $fullStar = (int) floor($rating);
-
+        $fullStar = 5;
+/*
         $halfStar = (($rating - $fullStar) > 0) ? true : false;
-
+*/
         for ($i=0; $i < $fullStar; $i++) { 
             
             $stars[] = 'filled';
         }
-
+/*
         if ($halfStar) {
 
             $stars[] = 'half';
@@ -85,7 +85,7 @@ class Rating extends Controller {
             
             $stars[] = 'empty';
         }
-
+*/
         return array_reverse($stars);
     }
 }

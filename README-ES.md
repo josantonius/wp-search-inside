@@ -43,6 +43,10 @@ Con Search Inside ahora puedes realizar búsquedas dentro de tus publicaciones o
 
 ¡No olvides activar el modo sensible a mayúsculas y minúsculas si lo necesitas!
 
+**Search Inside posee soporte completo para codificación UTF-8 y puede realizar búsquedas en cualquier idioma.**
+
+![image](resources/search-inside-1.1.9.png)
+
 ### Instalación 
 
 Puedes instalar este plugin desde el [repositorio oficial](https://es.wordpress.org/plugins/search-inside/) en WordPress.
@@ -77,7 +81,7 @@ Una vez activado:
     
 ### Requisitos
 
-Este plugin es soportado por versiones de PHP 5.3 o superiores y es compatible con versiones de HHVM 3.0 o superiores.
+Este plugin es soportado por versiones de PHP 5.6 o superiores y es compatible con versiones de HHVM 3.0 o superiores.
 
 ### Imágenes
 

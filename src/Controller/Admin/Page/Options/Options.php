@@ -170,6 +170,10 @@ class Options extends Controller {
                 $this->data['idContainer'] = 'search-inside-sc';
             }
 
+            $sensitive = ($this->data['caseSensitive'] === 'on');
+
+            $this->data['caseSensitive'] = $sensitive;
+            
             $this->model->setSettings($this->data);
         }
 

@@ -84,13 +84,13 @@ $data = View::get();
                   <div class="jst-checkbox">
                      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
 
-                        <?php $checked = $data['caseSensitive'] ?>
+                        <?php $checked = $data['case-sensitive'] ?>
 
                         <input type="checkbox" id="checkbox-1" name="caseSensitive" class="mdl-checkbox__input" <?= $checked ?>>
                         <span class="mdl-checkbox__label">
 
                            <?= __('Case sensitive', 'search-inside') ?>
-                        
+
                         </span>
                      </label>
                   </div>

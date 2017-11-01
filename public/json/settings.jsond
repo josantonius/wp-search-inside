@@ -1,8 +1,8 @@
 {
-    "searchIn": "main",
+    "searchIn":    "main",
     "executeWith": "off",
     "idContainer": "tag",
-    "searchMode": "words",
+    "searchMode":  "words",
     "wordColors": [
         "#57ceb6",
         "#85c1e9",
