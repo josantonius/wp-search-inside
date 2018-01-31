@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.2.0 - 2018-01-31
+
+* Fixed bug in `WP_ Menu` Library: The private method `check_permissions()` was eliminated, it is unnecessary and affects the site's globally. WordPress's `add_menu_page()` and `add_submenu_page()` methods already display the page according to the user's capabilities.
+
 ## 1.1.9 - 2017-11-01
 
 * Fixed error in options page when activating sensitive case.

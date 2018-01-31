@@ -2,8 +2,8 @@
 Contributors: josantonius
 Donate link: https://paypal.me/Josantonius
 Tags: search-engine,wp-search-engine,highlight-words,highlight-phrases,highlight-paragraphs
-Tested up to: 4.9
-Stable tag: 1.1.9
+Tested up to: 4.9.2
+Stable tag: 1.2.0
 Requires at least: 4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -87,6 +87,10 @@ Search Inside has full support for UTF-8 encoding and can search in any language
 
 == Changelog ==
 
+= 1.2.0 =
+
+* Fixed bug in `WP_ Menu` Library: The private method `check_permissions()` was eliminated, it is unnecessary and affects the site's globally. WordPress's `add_menu_page()` and `add_submenu_page()` methods already display the page according to the user's capabilities.
+
 = 1.1.9 =
 
 * Fixed error in options page when activating sensitive case.
@@ -137,6 +141,10 @@ Changes in methods.
 * First version.
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+
+* Fixed bug in `WP_ Menu` Library: The private method `check_permissions()` was eliminated, it is unnecessary and affects the site's globally. WordPress's `add_menu_page()` and `add_submenu_page()` methods already display the page according to the user's capabilities.
 
 = 1.1.9 =
 
