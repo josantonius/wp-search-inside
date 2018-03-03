@@ -1,25 +1,26 @@
 <?php
 /**
- * Search Inside Wordpress Plugin.
- * 
- * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    GPL-2.0+
- * @link       https://github.com/Josantonius/Search-Inside.git
- * @since      1.0.0
+ * Search Inside WorPress Plugin.
+ *
+ * @author    Josantonius <hello@josantonius.com>
+ * @package   josantonius/search-inside
+ * @copyright 2017 - 2018 (c) Josantonius - Search Inside
+ * @license   GPL-2.0+
+ * @link      https://github.com/josantonius/search-inside.git
+ * @since     1.0.0
  */
 
-$DS = DIRECTORY_SEPARATOR;
+require 'vendor/autoload.php';
 
-require 'lib' . $DS . 'vendor' . $DS .'autoload.php';
+use Eliasis\Framework\App;
 
-use Eliasis\App\App;
-
-if (!defined('WP_UNINSTALL_PLUGIN')) {
-
-    exit();
+if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
+	exit();
 }
 
-App::run(__DIR__, 'wordpress-plugin', 'SearchInside');
+App::run( __DIR__, 'wordpress-plugin', 'SearchInside' );
 
-App::SearchInside()->instance('Uninstall', 'controller')->removeAll();
+App::SearchInside()->getControllerInstance(
+	'Uninstall',
+	'controller'
+)->remove_all();

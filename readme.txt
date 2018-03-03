@@ -2,8 +2,8 @@
 Contributors: josantonius
 Donate link: https://paypal.me/Josantonius
 Tags: search-engine,wp-search-engine,highlight-words,highlight-phrases,highlight-paragraphs
-Tested up to: 4.9.2
-Stable tag: 1.2.0
+Tested up to: 4.9.4
+Stable tag: 1.2.1
 Requires at least: 4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -87,6 +87,20 @@ Search Inside has full support for UTF-8 encoding and can search in any language
 
 == Changelog ==
 
+= 1.2.1 =
+
+* Implemented `PHP Mess Detector` to detect inconsistencies in code styles.
+
+* Implemented `PHP Code Beautifier and Fixer` to fixing errors automatically.
+
+* Implemented `PHP Coding Standards Fixer` to organize PHP code automatically according to PSR standards.
+
+* Implemented `WordPress PHPCS code standard` from all library PHP files.
+
+* Implemented `Codacy` to automates code reviews and monitors code quality over time.
+
+* Implemented `Codecov` to coverage reports.
+
 = 1.2.0 =
 
 * Fixed bug in `WP_ Menu` Library: The private method `check_permissions()` was eliminated, it is unnecessary and affects the site's globally. WordPress's `add_menu_page()` and `add_submenu_page()` methods already display the page according to the user's capabilities.
@@ -141,6 +155,20 @@ Changes in methods.
 * First version.
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+
+* Implemented `PHP Mess Detector` to detect inconsistencies in code styles.
+
+* Implemented `PHP Code Beautifier and Fixer` to fixing errors automatically.
+
+* Implemented `PHP Coding Standards Fixer` to organize PHP code automatically according to PSR standards.
+
+* Implemented `WordPress PHPCS code standard` from all library PHP files.
+
+* Implemented `Codacy` to automates code reviews and monitors code quality over time.
+
+* Implemented `Codecov` to coverage reports.
 
 = 1.2.0 =
 

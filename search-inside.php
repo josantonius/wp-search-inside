@@ -1,54 +1,53 @@
 <?php
 /**
- * Search Inside Wordpress Plugin.
+ * Search Inside WordPress Plugin.
  *
  * Plugin Name: Search Inside
- * Plugin URI:  https://github.com/Josantonius/Search-Inside.git
+ * Plugin URI:  https://github.com/josantonius/search-inside.git
  * Description: Easily search text within your pages or blog posts.
- * Version:     1.2.0
+ * Version:     1.2.1
  * Author:      Josantonius
- * Author URI:  https://josantonius.com/ 
+ * Author URI:  https://josantonius.com/
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain: search-inside
  * Domain Path: /languages
  */
 
-use Eliasis\App\App;
+use Eliasis\Framework\App;
 
-$DS = DIRECTORY_SEPARATOR;                                                                         
-/** 
+/**
  * Don't expose information if this file called directly.
  */
-if (!function_exists('add_action') || !defined('ABSPATH')) {
+if ( ! function_exists( 'add_action' ) || ! defined( 'ABSPATH' ) ) {
 
-    echo 'I can do when called directly.'; die;
+	echo 'I can do when called directly.';
+	die;
 }
 
-/** 
+/**
  * Classloader.
  */
-require 'lib' . $DS . 'vendor' . $DS .'autoload.php';
+require 'vendor/autoload.php';
 
-/** 
+/**
  * Start application.
  */
-App::run(__DIR__, 'wordpress-plugin', 'SearchInside');
+App::run( __DIR__, 'wordpress-plugin', 'SearchInside' );
 
-/** 
+/**
  * Get main instance.
  */
-$Launcher = App::instance('Launcher', 'controller');
+$launcher = App::getControllerInstance( 'Launcher', 'controller' );
 
-/** 
+/**
  * Register hooks.
  */
-register_activation_hook(__FILE__, [$Launcher, 'activation']);
+register_activation_hook( __FILE__, [ $launcher, 'activation' ] );
 
-register_deactivation_hook(__FILE__, [$Launcher, 'deactivation']);
+register_deactivation_hook( __FILE__, [ $launcher, 'deactivation' ] );
 
-/** 
+/**
  * Launch application.
  */
-$Launcher->init();
-?>
+$launcher->init();

@@ -1,28 +1,27 @@
 <?php
 /**
- * Search Inside Wordpress Plugin.
- * 
- * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    GPL-2.0+
- * @link       https://github.com/Josantonius/Search-Inside.git
- * @since      1.1.7
+ * Search Inside WordPress Plugin.
+ *
+ * @author    Josantonius <hello@josantonius.com>
+ * @package   josantonius/search-inside
+ * @copyright 2017 - 2018 (c) Josantonius - Search Inside
+ * @license   GPL-2.0+
+ * @link      https://github.com/josantonius/search-inside.git
+ * @since     1.1.7
  */
 
-use Eliasis\App\App;
+use Eliasis\Framework\App;
 
-$DS   = App::DS;
-$ROOT = App::ROOT();
+$root_path = App::ROOT();
 
 return [
 
-    'path' => [
+	'path' => [
 
-        'modules'   => $ROOT. 'modules'.$DS,
-        'public'    => $ROOT. 'public' .$DS,
-        'json'      => $ROOT. 'public' .$DS.'json'     .$DS,
-        'layout'    => $ROOT. 'src'    .$DS.'template' .$DS.'layout'   .$DS,
-        'page'      => $ROOT. 'src'    .$DS.'template' .$DS.'page'     .$DS,
-        'component' => $ROOT. 'src'    .$DS.'template' .$DS.'component'.$DS,
-    ],
+		'modules'   => $root_path . 'modules/',
+		'public'    => $root_path . 'public/',
+		'json'      => $root_path . 'public/json/',
+		'layout'    => $root_path . 'src/template/layout/',
+		'page'      => $root_path . 'src/template/page/',
+	],
 ];

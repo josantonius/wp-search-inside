@@ -1,0 +1,39 @@
+{
+  "name": "search-inside",
+  "version": "1.2.1",
+  "description": "Easily search text within your pages or blog posts.",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^5.0.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglify-es": "^1.0.0",
+    "pump": "^3.0.0",
+    "uglify-es": "^3.3.10"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josantonius/search-inside.git"
+  },
+  "author": "Josantonius",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/josantonius/search-inside/issues"
+  },
+  "homepage": "https://github.com/josantonius/search-inside#readme"
+}

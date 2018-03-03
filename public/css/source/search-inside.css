@@ -1,0 +1,123 @@
+/**
+ * Search Inside Wordpress Plugin.
+ *
+ * @author    Josantonius <hello@josantonius.com>
+ * @package   josantonius/search-inside
+ * @copyright 2017 - 2018 (c) Josantonius - Search Inside
+ * @license   GPL-2.0+
+ * @link      https://github.com/josantonius/search-inside.git
+ * @since     1.1.0
+ */
+#searchinside {
+  width: 344px;
+  height: 47px;
+  border-radius: 2px;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  background: #f3f3f3;
+  margin-right: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 0;
+  right: 0;
+  z-index: 99999;
+  max-width: 344px;
+}
+
+.nodisplay {
+  display: none;
+}
+
+#searchinside.appended #wpsi-cancel-button {
+  display: none !important;
+}
+
+#wpsi-search-input {
+  height: 82%;
+  width: 100%;
+  margin-top: 2px;
+  margin-left: 4px;
+  outline-style: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: transparent;
+  border: none !important;
+  background: #f3f3f3;
+  font-size: 1.1em;
+}
+
+#wpsi-buttons {
+  display: table;
+  text-align: center;
+  position: relative;
+  color: #b1b1b1;
+  float: right;
+  padding: 6px;
+  top: 50%;
+  width: auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#wpsi-content {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+}
+
+#wpsi-bar {
+  font-size: 31px !important;
+  display: table;
+  position: relative;
+  font-weight: lighter;
+  top: 43%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: rgba(0, 0, 0, 0.12) !important;
+}
+
+#wpsi-buttons span {
+  padding: 6px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+#wpsi-counter {
+  display: table;
+  text-align: center;
+  font-size: 13px;
+  position: relative;
+  color: #b1b1b1;
+  font-weight: lighter;
+  padding: 6px;
+  top: 50%;
+  width: auto;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.wpsi-active-button {
+  color: #767676;
+}
+
+#searchinside.appended {
+  position: static;
+  display: block;
+  width: 100%;
+  -webkit-transition: all 300ms cubic-bezier(0.4, 0.29, 0.64, 0.71);
+  transition: all 300ms cubic-bezier(0.4, 0.29, 0.64, 0.71);
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic2VhcmNoLWluc2lkZS5jc3MiLCJzb3VyY2VzIjpbInNlYXJjaC1pbnNpZGUuc2FzcyIsImxheW91dC9fc2VhcmNoLnNhc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7OztHQVNHO0FDVEgsQUFBQSxhQUFhLENBQUM7RUFDWixLQUFLLEVBQUUsS0FBSztFQUNaLE1BQU0sRUFBRSxJQUFJO0VBQ1osYUFBYSxFQUFFLEdBQUc7RUFDbEIsUUFBUSxFQUFFLEtBQUs7RUFDZixlQUFlLEVBQUUsTUFBTTtFQUN2QixhQUFhLEVBQUUsTUFBTTtFQUNyQixVQUFVLEVBQUUsQ0FBQyxDQUFDLEdBQUcsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLG1CQUFtQixFQUFFLENBQUMsQ0FBQyxHQUFHLENBQUMsR0FBRyxDQUFFLElBQUcsQ0FBQyxrQkFBa0IsRUFBRSxDQUFDLENBQUMsR0FBRyxDQUFDLEdBQUcsQ0FBQyxDQUFDLENBQUMsbUJBQW1CO0VBQy9HLFVBQVUsRUFBRSxPQUFPO0VBQ25CLFlBQVksRUFBRSxHQUFHO0VBQ2pCLGNBQWMsRUFBRSxNQUFNO0VBQ3RCLEdBQUcsRUFBRSxDQUFDO0VBQ04sS0FBSyxFQUFFLENBQUM7RUFDUixPQUFPLEVBQUUsS0FBSztFQUNkLFNBQVMsRUFBRSxLQUFLO0NBQUk7O0FBRXRCLEFBQUEsVUFBVSxDQUFDO0VBQ1QsT0FBTyxFQUFFLElBQUk7Q0FBSTs7QUFFbkIsQUFBdUIsYUFBVixBQUFBLFNBQVMsQ0FBQyxtQkFBbUIsQ0FBQztFQUN6QyxPQUFPLEVBQUUsZUFBZTtDQUFJOztBQUU5QixBQUFBLGtCQUFrQixDQUFDO0VBQ2pCLE1BQU0sRUFBRSxHQUFHO0VBQ1gsS0FBSyxFQUFFLElBQUk7RUFDWCxVQUFVLEVBQUUsR0FBRztFQUNmLFdBQVcsRUFBRSxHQUFHO0VBQ2hCLGFBQWEsRUFBRSxJQUFJO0VBQ25CLFVBQVUsRUFBRSxJQUFJO0VBQ2hCLFlBQVksRUFBRSxXQUFXO0VBQ3pCLE1BQU0sRUFBRSxlQUFlO0VBQ3ZCLFVBQVUsRUFBRSxPQUFPO0VBQ25CLFNBQVMsRUFBRSxLQUFLO0NBQUk7O0FBRXRCLEFBQUEsYUFBYSxDQUFDO0VBQ1osT0FBTyxFQUFFLEtBQUs7RUFDZCxVQUFVLEVBQUUsTUFBTTtFQUNsQixRQUFRLEVBQUUsUUFBUTtFQUNsQixLQUFLLEVBQUUsT0FBTztFQUNkLEtBQUssRUFBRSxLQUFLO0VBQ1osT0FBTyxFQUFFLEdBQUc7RUFDWixHQUFHLEVBQUUsR0FBRztFQUNSLEtBQUssRUFBRSxJQUFJO0VBQ1gsYUFBYSxFQUFFLGdCQUFnQjtFQUMvQixpQkFBaUIsRUFBRSxnQkFBZ0I7RUFDbkMsU0FBUyxFQUFFLGdCQUFnQjtDQUFHOztBQUVoQyxBQUFBLGFBQWEsQ0FBQztFQUNaLE9BQU8sRUFBRSxXQUFXO0VBQ3BCLE1BQU0sRUFBRSxJQUFJO0VBQ1osS0FBSyxFQUFFLElBQUk7Q0FBSTs7QUFFakIsQUFBQSxTQUFTLENBQUM7RUFDUixTQUFTLEVBQUUsZUFBZTtFQUMxQixPQUFPLEVBQUUsS0FBSztFQUNkLFFBQVEsRUFBRSxRQUFRO0VBQ2xCLFdBQVcsRUFBRSxPQUFPO0VBQ3BCLEdBQUcsRUFBRSxHQUFHO0VBQ1IsYUFBYSxFQUFFLGdCQUFnQjtFQUMvQixpQkFBaUIsRUFBRSxnQkFBZ0I7RUFDbkMsU0FBUyxFQUFFLGdCQUFnQjtFQUMzQixLQUFLLEVBQUUsbUJBQW1CLENBQUMsVUFBVTtDQUFHOztBQUUxQyxBQUFjLGFBQUQsQ0FBQyxJQUFJLENBQUM7RUFDakIsT0FBTyxFQUFFLEdBQUc7RUFDWixNQUFNLEVBQUUsT0FBTztFQUNmLFNBQVMsRUFBRSxJQUFJO0NBQUk7O0FBRXJCLEFBQUEsYUFBYSxDQUFDO0VBQ1osT0FBTyxFQUFFLEtBQUs7RUFDZCxVQUFVLEVBQUUsTUFBTTtFQUNsQixTQUFTLEVBQUUsSUFBSTtFQUNmLFFBQVEsRUFBRSxRQUFRO0VBQ2xCLEtBQUssRUFBRSxPQUFPO0VBQ2QsV0FBVyxFQUFFLE9BQU87RUFDcEIsT0FBTyxFQUFFLEdBQUc7RUFDWixHQUFHLEVBQUUsR0FBRztFQUNSLEtBQUssRUFBRSxJQUFJO0VBQ1gsYUFBYSxFQUFFLGdCQUFnQjtFQUMvQixpQkFBaUIsRUFBRSxnQkFBZ0I7RUFDbkMsU0FBUyxFQUFFLGdCQUFnQjtDQUFHOztBQUVoQyxBQUFBLG1CQUFtQixDQUFDO0VBQ2xCLEtBQUssRUFBRSxPQUFPO0NBQUk7O0FBRXBCLEFBQUEsYUFBYSxBQUFBLFNBQVMsQ0FBQztFQUNyQixRQUFRLEVBQUUsTUFBTTtFQUNoQixPQUFPLEVBQUUsS0FBSztFQUNkLEtBQUssRUFBRSxJQUFJO0VBQ1gsa0JBQWtCLEVBQUUsR0FBRyxDQUFDLEtBQUssQ0FBQyxtQ0FBbUM7RUFDakUsZUFBZSxFQUFFLEdBQUcsQ0FBQyxLQUFLLENBQUMsbUNBQW1DO0VBQzlELGFBQWEsRUFBRSxHQUFHLENBQUMsS0FBSyxDQUFDLG1DQUFtQztFQUM1RCxVQUFVLEVBQUUsR0FBRyxDQUFDLEtBQUssQ0FBQyxtQ0FBbUM7Q0FBRyJ9 */
+
+/*# sourceMappingURL=search-inside.css.map */

@@ -1,6 +1,9 @@
 /lib export-ignore
-/resources export-ignore
+/node_modules export-ignore
 /public/sass export-ignore
+/resources export-ignore
+/public/css/*.map export-ignore
+/public/css/source/*.map export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore
 CHANGELOG.md export-ignore
@@ -10,3 +13,5 @@ README.md export-ignore
 README-ES.md export-ignore
 .editorconfig export-ignore
 composer.lock export-ignore
+gulpfile.js export-ignore
+package-lock.json export-ignore

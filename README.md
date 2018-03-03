@@ -1,6 +1,6 @@
-# Search Inside Wordpress Plugin
+# Search Inside WordPress Plugin
 
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/plugin/dt/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![License](https://poser.pugx.org/josantonius/search-inside/license)](https://packagist.org/packages/josantonius/search-inside/license)
+[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/plugin/dt/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![License](https://poser.pugx.org/josantonius/search-inside/license)](https://packagist.org/packages/josantonius/search-inside) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/18f6a66114c34f05b5837fd6ad2d1d35)](https://www.codacy.com/app/Josantonius/Extensions-For-Grifus?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/Extensions-For-Grifus&amp;utm_campaign=Badge_Grade) [![Travis](https://travis-ci.org/josantonius/search-inside.svg)](https://travis-ci.org/josantonius/search-inside) [![WP](https://img.shields.io/badge/WordPress-Standar-1abc9c.svg)](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/) [![CodeCov](https://codecov.io/gh/josantonius/search-inside/branch/master/graph/badge.svg)](https://codecov.io/gh/josantonius/search-inside)
 
 [Versión en español](README-ES.md)
 
@@ -10,22 +10,18 @@ Easily search text within your pages or blog posts.
 
 ---
 
-- [Installation](#installation)
 - [Requirements](#requirements)
+- [Installation](#installation)
 - [Images](#images)
+- [Tests](#tests)
+- [TODO](#-todo)
 - [Contribute](#contribute)
-- [Licensing](#licensing)
+- [License](#license)
 - [Copyright](#copyright)
 
 ---
 
 With Search Inside now you can search within your posts or pages. 
-
-<p align="center">
-  <a href="https://youtu.be/MCl9j7119uU" title="Search Inside">
-  	<img src="resources/thumbnail-english-video.png">
-  </a>
-</p>
 
 **There are different ways to display the search engine**
 
@@ -45,23 +41,19 @@ Don't forget to turn on case sensitive mode if you need it!
 
 **Search Inside has full support for UTF-8 encoding and can search in any language.**
 
-![image](resources/search-inside-1.1.9.png)
+<p align="center">
+  <a href="https://youtu.be/MCl9j7119uU" title="Search Inside">
+    <img src="resources/thumbnail-english-video.png">
+  </a>
+</p>
 
-### Installation
+## Requirements
+
+This WordPress plugin is supported by **PHP versions 5.6** or higher and is compatible with **HHVM versions 3.0** or higher.
+
+## Installation
 
 You can download this plugin from the [official repository](https://es.wordpress.org/plugins/search-inside/) in WordPress.
-
-From [Composer](http://getcomposer.org/download/). In the root folder of WordPress run:
-
-    $ composer require josantonius/search-inside
-
-The previous command will only install the necessary files, if you prefer to download the entire source code (including tests, vendor folder, exceptions not used, docs...) you can use:
-
-    $ composer require josantonius/search-inside --prefer-source
-
-Or you can also clone the complete repository with Git:
-
-	$ git clone https://github.com/Josantonius/WP-SearchInside.git
 
 From your WordPress dashboard:
 
@@ -76,14 +68,10 @@ From WordPress.org:
 	3. Activate Search Inside from your Plugins page.
 
 Once Activated:
+	
+Go to `Search Inside > Options` to configure the plugin.
 
-	Visit 'Search Inside > Options' to configure the plugin.
-
-### Requirements
-
-This pluggin is supported by PHP versions 5.6 or higher and is compatible with HHVM versions 3.0 or higher.
-
-### Images
+## Images
 
 ![image](resources/screenshot-1.png)
 ![image](resources/screenshot-2.png)
@@ -93,22 +81,63 @@ This pluggin is supported by PHP versions 5.6 or higher and is compatible with H
 ![image](resources/screenshot-9.png)
 ![image](resources/screenshot-10.png)
 
-### Contribute
-1. Check for open issues or open a new issue to start a discussion around a bug or feature.
-1. Fork the repository on GitHub to start making your changes.
-1. Write one or more tests for the new feature or that expose the bug.
-1. Make code changes to implement the feature or fix the bug.
-1. Send a pull request to get your changes merged and published.
+## Tests 
 
-This is intended for large and long-lived objects.
+To run [tests](tests) you just need [composer](http://getcomposer.org/download/) and to execute the following:
 
-### Licensing
+    $ git clone https://github.com/josantonius/search-inside.git
+    
+    $ cd search-inside
 
-This project is licensed under **GPL-2.0+**. See the [LICENSE](LICENSE) file for more info.
+    $ bash bin/install-wp-tests.sh wordpress_test root '' localhost latest
 
-### Copyright
+    $ composer install
 
-2017 Josantonius, [josantonius.com](https://josantonius.com/)
+Run unit tests with [PHPUnit](https://phpunit.de/):
+
+    $ composer phpunit
+
+Run [WordPress](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/) code standard tests with [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer):
+
+    $ composer phpcs
+
+Run [PHP Mess Detector](https://phpmd.org/) tests to detect inconsistencies in code style:
+
+    $ composer phpmd
+
+Run all previous tests:
+
+    $ composer tests
+
+## ☑ TODO
+
+- [ ] Add more tests.
+- [ ] Add new feature.
+- [ ] Improve documentation.
+- [ ] Refactor code for disabled code style rules. See [phpmd.xml](phpmd.xml) and [.php_cs.dist](.php_cs.dist).
+
+## Contribute
+
+If you would like to help, please take a look at the list of
+[issues](https://github.com/josantonius/search-inside/issues) or the [To Do](#-todo) checklist.
+
+**Pull requests**
+
+* [Fork and clone](https://help.github.com/articles/fork-a-repo).
+* Run the command `composer install` to install the dependencies.
+  This will also install the [dev dependencies](https://getcomposer.org/doc/03-cli.md#install).
+* Run the command `composer fix` to excute code standard fixers.
+* Run the [tests](#tests).
+* Create a **branch**, **commit**, **push** and send me a
+  [pull request](https://help.github.com/articles/using-pull-requests).
+
+## License
+
+This project is licensed under **GPL-2.0+ license**. See the [LICENSE](LICENSE) file for more info.
+
+## Copyright
+
+2017 - 2018 Josantonius, [josantonius.com](https://josantonius.com/)
 
 If you find it useful, let me know :wink:
 

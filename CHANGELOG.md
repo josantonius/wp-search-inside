@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 1.2.1 - 2018-03-02
+
+* Implemented `PHP Mess Detector` to detect inconsistencies in code styles.
+
+* Implemented `PHP Code Beautifier and Fixer` to fixing errors automatically.
+
+* Implemented `PHP Coding Standards Fixer` to organize PHP code automatically according to PSR standards.
+
+* Implemented `WordPress PHPCS code standard` from all library PHP files.
+
+* Implemented `Codacy` to automates code reviews and monitors code quality over time.
+
+* Implemented `Codecov` to coverage reports.
+
 ## 1.2.0 - 2018-01-31
 
 * Fixed bug in `WP_ Menu` Library: The private method `check_permissions()` was eliminated, it is unnecessary and affects the site's globally. WordPress's `add_menu_page()` and `add_submenu_page()` methods already display the page according to the user's capabilities.

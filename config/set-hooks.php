@@ -1,26 +1,22 @@
 <?php
 /**
- * Search Inside Wordpress Plugin.
- * 
- * @author     Josantonius - hello@josantonius.com
- * @copyright  Copyright (c) 2017
- * @license    GPL-2.0+
- * @link       https://github.com/Josantonius/Search-Inside.git
- * @since      1.1.7
+ * Search Inside WordPress Plugin.
+ *
+ * @author    Josantonius <hello@josantonius.com>
+ * @package   josantonius/search-inside
+ * @copyright 2017 - 2018 (c) Josantonius - Search Inside
+ * @license   GPL-2.0+
+ * @link      https://github.com/josantonius/search-inside.git
+ * @since     1.1.3
  */
 
-use Eliasis\App\App,
-	Eliasis\Module\Module;
+use Eliasis\Framework\App;
 
-$namespace = App::SearchInside()->get('namespaces', 'admin-page');
-
-$Options = $namespace . 'Options\Options';
+$namespace = App::SearchInside()->getOption( 'namespaces', 'admin-page' );
 
 return [
-
-    'hooks' => [
-
-        ['select-options-one', [$Options, 'selectOptionsOne'], 8, 0],
-        ['select-options-two', [$Options, 'selectOptionsTwo'], 8, 0],
-    ]
+	'hooks' => [
+		[ 'select-options-one', [ $namespace . 'Options', 'select_options_one' ] ],
+		[ 'select-options-two', [ $namespace . 'Options', 'select_options_two' ] ],
+	],
 ];
