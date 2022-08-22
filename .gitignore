@@ -8,7 +8,6 @@ artifacts/
 node_modules/
 docs/_build
 docs/*.pyc
-.git*/
 .idea
 .DS_STORE
 modules/
@@ -18,3 +17,5 @@ plugins/
 components/
 public/css/min/*
 public/js/min/*
+wp-search-inside.code-workspace
+.vscode/

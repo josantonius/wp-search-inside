@@ -1,6 +1,6 @@
 # Search Inside WordPress Plugin
 
-[![WordPress plugin](https://img.shields.io/wordpress/plugin/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/plugin/dt/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![WordPress](https://img.shields.io/wordpress/v/search-inside.svg)](https://wordpress.org/plugins/search-inside/) [![License](https://poser.pugx.org/josantonius/search-inside/license)](https://packagist.org/packages/josantonius/search-inside) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d1387a03980b4e19a40e568942d92e2c)](https://www.codacy.com/app/Josantonius/search-inside?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Josantonius/search-inside&amp;utm_campaign=Badge_Grade) [![Travis](https://travis-ci.org/josantonius/search-inside.svg)](https://travis-ci.org/josantonius/search-inside) [![WP](https://img.shields.io/badge/WordPress-Standar-1abc9c.svg)](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/) [![CodeCov](https://codecov.io/gh/josantonius/search-inside/branch/master/graph/badge.svg)](https://codecov.io/gh/josantonius/search-inside)
+[![License](https://poser.pugx.org/josantonius/wp-search-inside/license)](https://packagist.org/packages/josantonius/wp-search-inside)
 
 [English version](README.md)
 
@@ -14,10 +14,8 @@ Busca y remarca fácilmente frases o palabras en páginas y entradas.
 - [Instalación](#instalación)
 - [Imágenes](#imagenes)
 - [Tests](#tests)
-- [Tareas pendientes](#-tareas-pendientes)
-- [Contribuir](#contribuir)
 - [Licencia](#licencia)
-- [Copyright](#copyright)
+- [Patrocinar](#patrocinar)
 
 ---
 
@@ -42,8 +40,8 @@ Con Search Inside ahora puedes realizar búsquedas dentro de tus publicaciones o
 **Search Inside posee soporte completo para codificación UTF-8 y puede realizar búsquedas en cualquier idioma.**
 
 <p align="center">
-  <a href="https://youtu.be/zGfcX-l8WOE" title="Search Inside">
-    <img src="resources/thumbnail-spanish-video.png">
+  <a href="resources/search-inside-wordpress-plugin-english.mp4" title="Search Inside">
+    <img src="resources/thumbnail-english-video.png">
   </a>
 </p>
 
@@ -51,26 +49,25 @@ Con Search Inside ahora puedes realizar búsquedas dentro de tus publicaciones o
 
 Este plugin es soportado por versiones de **PHP 5.6** o superiores y es compatible con versiones de **HHVM 3.0** o superiores.
 
-## Instalación 
+## Instalación
 
 Puedes instalar este plugin desde el [repositorio oficial](https://es.wordpress.org/plugins/search-inside/) en WordPress.
 
 Desde el panel de administración de WordPress:
 
-	1. Entra en 'Plugins > Añadir Nuevo'
-	2. Busca 'Search Inside'
-	3. Activa Search Inside en tu página de plugins.
+ 1. Entra en 'Plugins > Añadir Nuevo'
+ 2. Busca 'Search Inside'
+ 3. Activa Search Inside en tu página de plugins.
 
 Desde WordPress.org:
 
-	1. Descarga [Search Inside](https://es.wordpress.org/plugins/search-inside/).
-	2. Sube el directorio 'search-inside' a tu directorio '/ wp-content / plugins /', usando tu método favorito (ftp, sftp, scp, etc ...).
-	3. Activa Search Inside en tu página de plugins.
+ 1. Descarga [Search Inside](https://es.wordpress.org/plugins/search-inside/).
+ 2. Sube el directorio 'search-inside' a tu directorio '/ wp-content / plugins /', usando tu método favorito (ftp, sftp, scp, etc ...).
+ 3. Activa Search Inside en tu página de plugins.
 
 Una vez activado:
 
 Entra en `Search Inside > Opciones` para configurar el plugin.
-
 
 ## Imágenes
 
@@ -82,62 +79,40 @@ Entra en `Search Inside > Opciones` para configurar el plugin.
 ![image](resources/screenshot-9.png)
 ![image](resources/screenshot-10.png)
 
-### Tests 
+### Tests
 
 Para ejecutar las [pruebas](tests) necesitarás [Composer](http://getcomposer.org/download/) y seguir los siguientes pasos:
 
-    $ git clone https://github.com/josantonius/search-inside.git
+    git clone https://github.com/josantonius/wp-search-inside.git
     
-    $ cd search-inside
+    cd wp-search-inside
 
-    $ composer install
+    composer install
 
 Ejecutar pruebas unitarias con [PHPUnit](https://phpunit.de/):
 
-    $ composer phpunit
+    composer phpunit
 
 Ejecutar pruebas de estándares de código para [WordPress](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/) con [PHPCS](https://github.com/squizlabs/PHP_CodeSniffer):
 
-    $ composer phpcs
+    composer phpcs
 
 Ejecutar pruebas con [PHP Mess Detector](https://phpmd.org/) para detectar inconsistencias en el estilo de codificación:
 
-    $ composer phpmd
+    composer phpmd
 
 Ejecutar todas las pruebas anteriores:
 
-    $ composer tests
+    composer tests
 
-## ☑ Tareas pendientes
+## Patrocinar
 
-- [ ] Agregar pruebas.
-- [ ] Añadir nueva funcionalidad.
-- [ ] Mejorar documentación.
-- [ ] Refactorizar código para las reglas de estilo de código deshabilitadas. Ver [phpmd.xml](phpmd.xml) y [.php_cs.dist](.php_cs.dist).
-
-## Contribuir
-
-Si deseas colaborar, puedes echar un vistazo a la lista de
-[issues](https://github.com/josantonius/search-inside/issues) o [tareas pendientes](#-tareas-pendientes).
-
-**Pull requests**
-
-* [Fork and clone](https://help.github.com/articles/fork-a-repo).
-* Ejecuta el comando `composer install` para instalar dependencias.
-  Esto también instalará las [dependencias de desarrollo](https://getcomposer.org/doc/03-cli.md#install).
-* Ejecuta el comando `composer fix` para estandarizar el código.
-* Ejecuta las [pruebas](#tests).
-* Crea una nueva rama (**branch**), **commit**, **push** y envíame un
-  [pull request](https://help.github.com/articles/using-pull-requests).
+Si este proyecto te ayuda a reducir el tiempo de desarrollo,
+[puedes patrocinarme](https://github.com/josantonius/lang/es-ES/README.md#patrocinar)
+para apoyar mi trabajo :blush:
 
 ## Licencia
 
-Este proyecto está licenciado bajo **licencia GPL-2.0+**. Consulta el archivo [LICENSE](LICENSE) para más información.
+Este repositorio tiene una licencia [GPL-2.0+ License](LICENSE).
 
-## Copyright
-
-2017 -2018 Josantonius, [josantonius.com](https://josantonius.com/)
-
-Si te ha resultado útil, házmelo saber :wink:
-
-Puedes contactarme en [Twitter](https://twitter.com/Josantonius) o a través de mi [correo electrónico](mailto:hello@josantonius.com).
+Copyright © 2017-2022, [Josantonius](https://github.com/josantonius/lang/es-ES/README.md#contacto)

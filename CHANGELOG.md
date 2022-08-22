@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2022-08-22
+
+* The repository was archived.
+
 ## 1.2.1 - 2018-03-02
 
 * Implemented `PHP Mess Detector` to detect inconsistencies in code styles.
@@ -298,12 +302,15 @@
 * Deleted `Josantonius\WP\Language\Language->__construct()` method.
 
 ## 1.1.1 - 2017-03-04
+
 * The repository were modified in GitHub.
 
 ## 1.1.0 - 2017-02-20
+
 * Bug fix - Don't display search engine when typing on input or textarea.
 
 ## 1.0.0 - 2017-02-16
+
 * Added `SearchInside\Admin\Pages\Options` class.
 * Added `SearchInside\Admin\Pages\Options::getInstance()` method.
 * Added `SearchInside\Admin\Pages\Options::getOptions()` method.
